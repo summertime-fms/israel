@@ -1,0 +1,7 @@
+@mixin desktop-container {
+  min-width: $desktop-width;
+  max-width: $desktop-maxWidth;
+
+  padding: 0 110px;
+  margin: 0 auto;
+}

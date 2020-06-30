@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-style: normal;
+  font-family: $content-font;
+}
+
+img {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #484848;
+}
