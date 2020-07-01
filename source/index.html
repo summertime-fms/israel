@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/FiraSans-Regular.woff2" as="font">
+  <link rel="preload" href="fonts/FiraSans-Medium.woff2" as="font">
   <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font">
   <link rel="preload" href="fonts/Raleway-ExtraBold.woff2" as="font">
   <title>Израиль</title>
@@ -19,18 +19,27 @@
      <div class="page-header__logo-wrapper">
        <img class="page-header__logo" src="img/header-logo@1x.png" srcset="img/header-logo@2x.png 2x" alt="Логотип" width="137" height="48">
      </div>
-     <a class="page-header__order" href="#">Заказать звонок</a>
+     <a class="page-header__order" href="#"><span>Заказать звонок</span></a>
    </div>
  </header>
  <main>
    <section class="intro">
-   <!-- <h1 class="intro__title"><span class="intro__title-inner">Израиль</span></h1> -->
-    <!-- <p class="intro__text">Учёба, путешествие и карьера<br> для еврейской молодёжи </p>
+   <h1 class="visually-hidden">Израиль</h1>
+    <p class="intro__text">Учёба, путешествие и карьера<br> для еврейской молодёжи </p>
    <div class="intro__scroll-tip">
     <div class="intro__scroll-icon"></div>
-   </div> -->
-
-
+   </div>
+   </section>
+   <section class="modal-call">
+     <button class="modal-call__close" type="button" aria-label="Закрыть"></button>
+     <h2 class="title modal-call__title">Заказать звонок</h2>
+     <p class="modal-call__text"> Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
+     <form class="modal-call__form form" action="#" method="POST">
+       <div class="modal-call__form-fields form__fields-group">
+         <input class="form__input" type="text" name="username" value="" placeholder="Имя" focused required>
+         <input class="form__input" type="tel" name="phone-number" value="" placeholder="Телефон" title="В формате +7 (ХХХ) ХХХ-ХХ-ХХ" required>
+       </div>
+     </form>
    </section>
  </main>
  <footer class="page-footer"></footer>

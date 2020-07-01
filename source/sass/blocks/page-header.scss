@@ -1,8 +1,7 @@
 .page-header {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 15px;
   line-height: 18px;
-
   color: $main-font-color;
 }
 
@@ -12,24 +11,72 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 32px;
+  padding-top: 53px;
 }
 
+.page-header__phone {
+  &:hover {
+    color: #a7a4a4;
+  }
+}
 
 .page-header__logo-wrapper {
   width: 137px;
+  margin-left: -28px;
 }
 
 .page-header__order {
   font-variant: small-caps;
-  text-transform: uppercase;
+  text-transform: lowercase;
+
+  &:hover {
+    color: #a7a4a4;
+    border-color: #a7a4a4;
+  }
 }
 
-.page-header__order::after {
+.page-header__order span {
+  border-bottom: 1px dashed $main-font-color;
+}
 
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  border-top: 1px dashed $main-font-color;
+
+@media (min-width: $tablet-width) and (max-width: $tablet-maxWidth) {
+  .page-header__wrapper {
+    @include tablet-container;
+    padding-top: 22px;
+  }
+}
+
+
+@media (max-width: $mobile-maxWidth) {
+  .page-header__wrapper {
+    @include mobile-container;
+    padding-right: 7px;
+    padding-top: 20px;
+    font-size: 14px;
+    line-height: 17px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .page-header__logo-wrapper {
+    width: 120px;
+    margin-left: 0;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+  }
+
+  .page-header__phone {
+    margin-left: 19px;
+    margin-bottom: 5px;
+    text-align: right;
+  }
+
+  .page-header__order {
+    margin-left: 13px;
+    padding-right: 3px;
+    text-align: right;
+  }
 }

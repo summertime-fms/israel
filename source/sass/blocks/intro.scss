@@ -1,24 +1,24 @@
 
 .intro {
   display: flex;
-  // mask-image: url("../img/mask-header@1x.png");
-  // mask-repeat: no-repeat;
-  // mask-size: 100%;
-  // mask-position: 100%;
-  height: 905px;
   margin-top: -80px;
   flex-direction: column;
   align-items: center;
   background-repeat: no-repeat;
+  // background-color: #dfc0a1;
+  background-position: 50% 30%, 50% 28%, 100% -1px;
+  background-size: 100%, 74% auto, 100%;
+  background-image: url("../img/girl@1x.png"), url("../img/title@1x.png"), url("../img/background-photo@1x.png");
 
-  background-position: bottom, 50% 15%, 100% -1px;
-  background-size: 100%, 90% auto, 100%;
-  background-image: url("../img/girl.png"), url("../img/title@1x.png"), url("../img/background-photo@1x.png");
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/girl@2x.png"), url("../img/title@2x.png"), url("../img/background-photo@2x.png");
+  }
 }
 
 .intro__text {
-  margin-top: auto;
-  margin-bottom: 60px;
+  margin: 0;
+  margin-bottom: 31px;
+  padding-top: 38%;
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
@@ -34,7 +34,7 @@
   align-items: center;
   width: 76px;
   height: 76px;
-  margin-bottom: 140px;
+  margin-bottom: 200px;
   border: 1px dashed #ffffff;
   border-radius: 50%;
 }
@@ -44,7 +44,44 @@
   height: 54px;
   border: 1px solid #ffffff;
   border-radius: 50%;
-  background-image: url("../img/mouse.png");
+  background-image: url("../img/mouse@1x.png");
+  background-size: 17px 26px;
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/mouse@2x.png");
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $tablet-maxWidth) {
+  .intro {
+    margin-top: -60px;
+    background-position: 50% 5%, 50% 15%, 100% -1px;
+  }
+
+  .intro__text {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: $mobile-maxWidth) {
+  .intro {
+    margin-top: -30px;
+    background-image: url("../img/girl_mobile@1x.png"), url("../img/title@1x.png"), url("../img/background-photo_mobile@1x.png");
+    background-position: 50% -4%, 50% 25.5%, 100% -1px;
+    background-size: 100%, 107% auto, 100%;
+
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/girl_mobile@2x.png"), url("../img/title@2x.png"), url("../img/background-photo_mobile@2x.png");
+    }
+  }
+
+
+  .intro__text {
+    padding-top: 94%;
+    font-size: 20px;
+    line-height: 24px;
+  }
 }

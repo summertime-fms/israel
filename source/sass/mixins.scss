@@ -5,3 +5,18 @@
   padding: 0 110px;
   margin: 0 auto;
 }
+
+@mixin tablet-container {
+  min-width: $tablet-width;
+  max-width: $tablet-maxWidth;
+
+  padding: 0 45px;
+  margin: 0 auto;
+}
+
+@mixin mobile-container {
+  min-width: unset;
+  max-width: $mobile-maxWidth;
+  padding: 0 15px;
+  margin: 0 auto;
+}
