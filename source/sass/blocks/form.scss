@@ -1,0 +1,118 @@
+.form__input-wrapper {
+  position: relative;
+
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+}
+
+.form__input-focused {
+  content: "";
+  position: absolute;
+
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  background: $yellow-gradient;
+  border-radius: 80px;
+  z-index: -1;
+  display: none;
+}
+
+.form input {
+  position: relative;
+  border: 2px solid #e3e3e3;
+  border-radius: 80px;
+  text-transform: lowercase;
+  font-size: 17px;
+  line-height: 20px;
+  font-variant: small-caps;
+  color: rgba(72, 72, 72, 0.5);
+  font-weight: 600;
+  padding-left: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &:focus {
+    outline: none;
+    border-color: transparent;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    & ~ .form__input-focused {
+      display: block;
+    }
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  &:invalid:not(:focus):not(:placeholder-shown) {
+    border: 2px solid $error-color;
+  }
+
+  &:valid:not(:focus):not(:placeholder-shown) {
+    border: 2px solid #484848;
+  }
+}
+
+.form__checkbox-wrapper {
+  align-self: center;
+}
+
+
+::placeholder {
+  opacity: 0.5;
+  color: $main-font-color;
+}
+
+.form__label {
+  opacity: 0.74;
+  line-height: 1.5;
+}
+
+.form__checkbox {
+  &:checked + label::after {
+    display: block;
+  }
+}
+
+.form__label--checkbox {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+
+  &::before {
+    content: "";
+
+    display: block;
+    margin-top: 5px;
+    margin-right: 10px;
+
+    width: 21px;
+    height: 15px;
+    border: 2px solid transparent;
+    border-image: $yellow-gradient;
+    border-image-slice: 1;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3px;
+
+    width: 16px;
+    height: 18px;
+
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: none;
+  }
+}
+

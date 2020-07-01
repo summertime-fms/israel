@@ -36,12 +36,25 @@
      <p class="modal-call__text"> Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
      <form class="modal-call__form form" action="#" method="POST">
        <div class="modal-call__form-fields form__fields-group">
+         <div class="form__input-wrapper">
          <input class="form__input" type="text" name="username" value="" placeholder="Имя" focused required>
+         <span class="form__input-focused"></span>
+         </div>
+         <div class="form__input-wrapper">
          <input class="form__input" type="tel" name="phone-number" value="" placeholder="Телефон" title="В формате +7 (ХХХ) ХХХ-ХХ-ХХ" required>
+         <span class="form__input-focused"></span>
+         </div>
+       </div>
+       <button class="form__button button" type="submit">Перезвоните мне</button>
+       <div class="form__checkbox-wrapper">
+       <input class="form__checkbox visually-hidden" id="approving" type="checkbox" name="approving" value="">
+       <label  class="form__label form__label--checkbox" for="approving">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
        </div>
      </form>
    </section>
  </main>
  <footer class="page-footer"></footer>
+ <div class="overlay"></div>
+ <script src="js/main.js"></script>
 </body>
 </html>

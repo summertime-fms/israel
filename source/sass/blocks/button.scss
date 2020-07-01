@@ -1,0 +1,28 @@
+.button {
+  min-width: 265px;
+  background: $yellow-gradient;
+  border-radius: 80px;
+  text-transform: lowercase;
+  text-align: center;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20px;
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  font-variant: small-caps;
+
+  cursor: pointer;
+
+  &:hover {
+    background: $hover-gradient;
+  }
+
+  &:active {
+    background: $active-gradient, $hover-gradient;
+    outline: none;
+  }
+}
+
