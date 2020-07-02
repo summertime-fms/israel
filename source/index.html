@@ -32,16 +32,17 @@
    </section>
    <section class="modal-call">
      <button class="modal-call__close" type="button" aria-label="Закрыть"></button>
+    <div class="modal-call__inner">
      <h2 class="title modal-call__title">Заказать звонок</h2>
      <p class="modal-call__text"> Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
-     <form class="modal-call__form form" action="#" method="POST">
+     <form class="modal-call__form form" action="#" method="POST" autocomplete="off">
        <div class="modal-call__form-fields form__fields-group">
          <div class="form__input-wrapper">
-         <input class="form__input" type="text" name="username" value="" placeholder="Имя" focused required>
+         <input class="form__input form__input--name" type="text" name="username" value="" minlength="2" maxlength="25" placeholder="Имя" focused required>
          <span class="form__input-focused"></span>
          </div>
          <div class="form__input-wrapper">
-         <input class="form__input" type="tel" name="phone-number" value="" placeholder="Телефон" title="В формате +7 (ХХХ) ХХХ-ХХ-ХХ" required>
+         <input class="form__input form__input--phone" type="tel" name="phone-number" value="" placeholder="Телефон" title="В формате +7 (ХХХ) ХХХ-ХХ-ХХ" required>
          <span class="form__input-focused"></span>
          </div>
        </div>
@@ -51,10 +52,12 @@
        <label  class="form__label form__label--checkbox" for="approving">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
        </div>
      </form>
+     </div>
    </section>
  </main>
  <footer class="page-footer"></footer>
  <div class="overlay"></div>
+ <script src="js/vendor.js"></script>
  <script src="js/main.js"></script>
 </body>
 </html>
