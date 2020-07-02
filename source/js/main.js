@@ -6,7 +6,6 @@ let modalCallClose = modalCall.querySelector('.modal-call__close');
 let overlay = document.querySelector('.overlay');
 
 let onEscPress = function(evt) {
-  // evt.preventDefault();
   if (evt.key === 'Escape') {
     closePopup();
 }}
@@ -46,12 +45,30 @@ modalCallClose.addEventListener('click', function(){
   closePopup();
 })
 
+// ICON-CROSS HOVER&ACTIVE
 
+let crossIcon = modalCallClose.querySelector('.modal-call__icon');
+console.log(crossIcon);
+let crossPath = crossIcon.querySelector('path');
+
+let highlightCross = function() {
+  crossPath.setAttribute('fill', 'url(#linear-hover)');
+}
+
+let lightoutCross = function() {
+  crossPath.setAttribute('fill', 'url(#linear)');
+}
+
+crossIcon.addEventListener('mouseover', function() {
+  highlightCross();
+})
+
+crossIcon.addEventListener('mouseout', function() {
+  lightoutCross();
+})
 
 
 // VALIDATION
-
-
 
 let form = document.querySelector('.form');
 let userNameInput = form.querySelector('.form__input--name');
@@ -72,3 +89,5 @@ userNameInput.setCustomValidity('Имя минимум из 2 символов')
 //PHONE-NUMBER INPUT MASK
 
 $(".form__input--phone").mask("8 (999) 999 99 99");
+
+

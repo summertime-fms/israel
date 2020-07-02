@@ -5,7 +5,6 @@
   flex-direction: column;
   align-items: center;
   background-repeat: no-repeat;
-  // background-color: #dfc0a1;
   background-position: 50% 30%, 50% 28%, 100% -1px;
   background-size: 100%, 74% auto, 100%;
   background-image: url("../img/girl@1x.png"), url("../img/title@1x.png"), url("../img/background-photo@1x.png");
@@ -77,7 +76,6 @@
       background-image: url("../img/girl_mobile@2x.png"), url("../img/title@2x.png"), url("../img/background-photo_mobile@2x.png");
     }
   }
-
 
   .intro__text {
     padding-top: 94%;

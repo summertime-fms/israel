@@ -44,16 +44,11 @@
   }
 }
 
-
-.modal-call {
+.modal {
   display: none;
-
   position: relative;
   font-family: $content-font;
   width: 480px;
-  padding-top: 55px;
-  padding-left: 50px;
-  padding-right: 70px;
   font-size: 15px;
   line-height: 1.7;
   color: $main-font-color;
@@ -63,39 +58,68 @@
   border-radius: 8px;
 }
 
-.modal-call--open {
-  display: block;
+
+.modal--call {
+  padding-top: 55px;
+  padding-left: 50px;
+  padding-right: 70px;
+}
+
+.modal--recall {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 60px 110px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 71px;
+    height: 64px;
+    margin-bottom: 30px;
+    background-image: url("../img/icon-checkmark.svg");
+  }
+}
+
+.modal--recall p {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.modal--open {
+  display: flex;
   position: fixed;
   animation: appear 0.3s ease-in;
 }
 
-.modal-call__form {
+
+.modal__form {
   display: flex;
   flex-direction: column;
 
   padding-bottom: 40px;
 }
 
-.modal-call__text {
+.modal__text {
   opacity: 0.87;
   margin-bottom: 30px;
 }
 
-.modal-call__form-fields input {
+.modal__form-fields input {
   width: 100%;
 }
 
-.modal-call__form-fields {
+.modal__form-fields {
   margin-bottom: 25px;
 }
 
-.modal-call__form button {
+.modal__form button {
   width: 265px;
   margin-bottom: 15px;
   align-self: center;
 }
 
-.modal-call__close {
+.modal__close {
   position: absolute;
   right: 32px;
 
@@ -103,41 +127,43 @@
   display: block;
   width: 18px;
   height: 17px;
-  background-image: url("../img/icon-close.svg");
-
   cursor: pointer;
 }
 
 @media (max-width: $mobile-maxWidth) {
-  .modal-call {
+  .modal {
     width: 320px;
     height: 100vh;
     padding-left: 15px;
     padding-right: 15px;
-    display: flex;
+
     flex-direction: column;
     justify-content: center;
   }
 
-  .modal-call__title {
+  .modal--open {
+    display: flex;
+  }
+
+  .modal__title {
     padding-top: 170px;
     text-align: center;
     font-size: 24px;
     line-height: 29px;
   }
 
-  .modal-call__close {
+  .modal__close {
     top: 24px;
     right: 24px;
   }
 
-  .modal-call__text {
+  .modal__text {
     text-align: center;
     font-size: 14px;
     line-height: 1.6;
   }
 
-  .modal-call__form {
+  .modal__form {
     padding-bottom: 170px;
   }
 }

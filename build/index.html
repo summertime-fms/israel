@@ -12,6 +12,15 @@
 <body>
   <div style="display: none;">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
+<linearGradient id="paint0_linear" x1="16.8421" y1="1.82858" x2="52.588" y2="13.7318" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFC341"></stop>
+<stop offset="0.963542" stop-color="#FFD701"></stop>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="30.6316" y1="8.02857" x2="55.5095" y2="19.0743" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFC341"></stop>
+<stop offset="0.963542" stop-color="#FFD701"></stop>
+</linearGradient>
+
 <linearGradient id="paint0_linear" x1="4.73684" y1="0.485716" x2="14.6703" y2="3.98809" gradientUnits="userSpaceOnUse">
 <stop stop-color="#FFC341"></stop>
 <stop offset="0.963542" stop-color="#FFD701"></stop>
@@ -70,7 +79,11 @@
 <use xlink:href="#image0" transform="scale(0.03125 0.0344828)"></use>
 </pattern>
 <image id="image0" width="32" height="29" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAdCAYAAADLnm6HAAAC60lEQVRIicXXTYiVVRgH8N84Y2gp+dFAQ4KjkWKKUk3Ql5i4UEIKQmkR7hQlEERduXAnhNgqqE2LiL4nUBduFD8WKqgF1kQZCDFqDDqN32aY423xnON95+3eOzN4x/5wOJfnfDz/85zn/J/30hx04Tv04QdsSfYZ+By9+BHbm+RvCF7CPVRK7Qj+qGNvbZbzFpxJG3+JhXgLAwWHe7AIKwqE1jaLwOy04ZWSfSZ+whcl+6o0vzsb2h6QwGDqW0r2XhGNMqam/s4D+h2C0+JU3w4zb6Hq1bzdTAILxIkq+KrBnOtpzt5mOs94DXeTg29KYy/gVhrbNxbOM15WjcTuZJuDv4zhyct4EX8nhweEMBUJPRR04ZKqDnzdaHL5+TQLT+JNoQ/dw8z9f5Ej8KgoHFkgxov7u/kwSKwQylUuGhfwRoHQrNQeb6bzFpzF07gh3nK2T8FVHMQSPJHG7uB3nMAp/Iqfhcrl9aNCvzjxAnHS8ZgndL4YkSu47L+Ryq0fR/EJ3hkNgVwinyrY5iXbTWzEs6KGt4oMX4J1+Azf43YNQltHSuBCWjC3YFuebIdHuEebKMHzsb5AohZmoKO4sBZy2ewfxnE7rom86C3seU9cYYe40i5RL1bimTSvG2vqEZiS+j8bON+GHYnAQLJ1YGL6XRHJOa207ioewWr0jKuzeV40UGc8b1QRz3J2ahML461pn+s4hA/E9+NUbEpzltaLQH5yvzQg8JGo/+0iMSeLkw2KpLwsakK/KFAZy7A5/T5I7ST8NNn2Y3EDEiPFBGxAj2qCHkiEaxLYa+iTOor3RH0fDV7BLlWtqYhkzRHQhpwHfYWF7anfjefxamqE8h3Hb0JDLooQj8N0dApRWyryIuMkPhZ/VIYoZla3d/GcCPnFZMuvYY2IyjX1lbBWO4cPhXDVRIsQm9drjN0Sz+pGwTZJfPXMSafsFFn9GP4RL+O8UMceHFNfkO4T6MROEa5BcS19eF/c/ZjiXw4X3+LTbxDoAAAAAElFTkSuQmCC"></image>
-</defs><symbol id="icon-close" viewBox="0 0 18 17">
+</defs><symbol id="icon-checkmark" viewBox="0 0 71 64">
+<rect x="3" y="3" width="58" height="58" rx="29" stroke="url(#paint0_linear)" stroke-width="6"></rect>
+<path d="M18 27.88L32.1972 43L66 7" stroke="url(#paint1_linear)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+
+</symbol><symbol id="icon-close" viewBox="0 0 18 17">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.48467 8.5L0 1.50703L1.41767 2.46254e-07L9 7.08422L16.5823 0L18 1.50703L10.5153 8.5L18 15.493L16.5823 17L9 9.91578L1.41767 17L6.13436e-07 15.493L7.48467 8.5Z" fill="url(#paint0_linear)"></path>
 
 </symbol><symbol id="icon-fb" viewBox="0 0 11 22">
@@ -131,13 +144,27 @@
     <div class="intro__scroll-icon"></div>
    </div>
    </section>
-   <section class="modal-call">
-     <button class="modal-call__close" type="button" aria-label="Закрыть"></button>
-    <div class="modal-call__inner">
-     <h2 class="title modal-call__title">Заказать звонок</h2>
-     <p class="modal-call__text"> Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
-     <form class="modal-call__form form" action="#" method="POST" autocomplete="off">
-       <div class="modal-call__form-fields form__fields-group">
+   <section class="modal modal--call">
+    <button class="modal__close" type="button" aria-label="Закрыть">
+      <svg class="modal__icon" width="18" height="17" viewBox="0 0 18 17" xmlns="http://www.w3.org/2000/svg">
+        <path id="cross" fill-rule="evenodd" clip-rule="evenodd" d="M7.48467 8.5L0 1.50703L1.41767 2.46254e-07L9 7.08422L16.5823 0L18 1.50703L10.5153 8.5L18 15.493L16.5823 17L9 9.91578L1.41767 17L6.13436e-07 15.493L7.48467 8.5Z" fill="url(#linear)"></path>
+        <defs>
+        <linearGradient id="linear" x1="4.73684" y1="0.485716" x2="14.6703" y2="3.98809" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FFC341"></stop>
+        <stop offset="0.963542" stop-color="#FFD701"></stop>
+        </linearGradient>
+        <linearGradient id="linear-hover" x1="-34" y1="-90" x2="94.7139" y2="84.2841" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FFC341"></stop>
+          <stop offset="0.963542" stop-color="#FFD701"></stop>
+          </linearGradient>
+        </defs>
+        </svg>
+     </button>
+    <div class="modal__inner">
+     <h2 class="title modal__title">Заказать звонок</h2>
+     <p class="modal__text"> Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
+     <form class="modal__form form" action="#" method="POST" autocomplete="off">
+       <div class="modal__form-fields form__fields-group">
          <div class="form__input-wrapper">
          <input class="form__input form__input--name" type="text" name="username" value="" minlength="2" maxlength="25" placeholder="Имя" focused="" required="">
          <span class="form__input-focused"></span>
@@ -154,6 +181,26 @@
        </div>
      </form>
      </div>
+   </section>
+   <section class="modal modal--recall">
+    <button class="modal__close" type="button" aria-label="Закрыть">
+      <svg class="modal__icon" width="18" height="17" viewBox="0 0 18 17" xmlns="http://www.w3.org/2000/svg">
+        <path id="cross" fill-rule="evenodd" clip-rule="evenodd" d="M7.48467 8.5L0 1.50703L1.41767 2.46254e-07L9 7.08422L16.5823 0L18 1.50703L10.5153 8.5L18 15.493L16.5823 17L9 9.91578L1.41767 17L6.13436e-07 15.493L7.48467 8.5Z" fill="url(#linear)"></path>
+        <defs>
+        <linearGradient id="linear" x1="4.73684" y1="0.485716" x2="14.6703" y2="3.98809" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FFC341"></stop>
+        <stop offset="0.963542" stop-color="#FFD701"></stop>
+        </linearGradient>
+        <linearGradient id="linear-hover" x1="-34" y1="-90" x2="94.7139" y2="84.2841" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FFC341"></stop>
+          <stop offset="0.963542" stop-color="#FFD701"></stop>
+          </linearGradient>
+        </defs>
+        </svg>
+     </button>
+     <h2 class="modal__title title">Заяка принята</h2>
+     <p class="modal__text">Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
+     <button class="modal__button button" type="button">Понятно</button>
    </section>
  </main>
  <footer class="page-footer"></footer>
