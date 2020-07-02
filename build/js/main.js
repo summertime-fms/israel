@@ -5,23 +5,36 @@ let modalCall = document.querySelector('.modal--call');
 let modalCallClose = modalCall.querySelector('.modal__close');
 let overlay = document.querySelector('.overlay');
 
+
+
 let onEscPress = function(evt) {
   if (evt.key === 'Escape') {
-    closePopup();
+    closePopup(modalCall);
+    closeOverlay();
 }}
 
 let openPopup = function(popup) {
   popup.classList.add('modal--open');
-  overlay.classList.add('overlay--show');
-
+  userNameInput.focus();
   document.addEventListener('keydown', onEscPress);
-  overlay.addEventListener('click', closePopup);
+}
+
+let openOverlay = function() {
+  overlay.classList.add('overlay--show');
+  overlay.addEventListener('click', function() {
+    closePopup(modalCall)
+    closePopup(modalRecall)
+    closeOverlay();
+  });
 }
 
 let closePopup = function(popup) {
   popup.classList.remove('modal--open');
-  overlay.classList.remove('overlay--show');
   document.removeEventListener('keydown', onEscPress);
+}
+
+let closeOverlay  = function() {
+  overlay.classList.remove('overlay--show');
   overlay.removeEventListener('click', closePopup);
 }
 
@@ -39,10 +52,12 @@ let centerElement = function(element) {
 orderCallLink.addEventListener('click', function() {
   openPopup(modalCall);
   centerElement(modalCall);
+  openOverlay();
 })
 
-modalCallClose.addEventListener('click', function(){
+modalCallClose.addEventListener('click', function() {
   closePopup(modalCall);
+  closeOverlay();
 })
 
 // ICON-CROSS HOVER&ACTIVE
@@ -72,6 +87,8 @@ crossIcon.addEventListener('mouseout', function() {
 
 let form = document.querySelector('.form');
 let userNameInput = form.querySelector('.form__input--name');
+
+
 
 userNameInput.addEventListener('invalid', function(evt) {
   if (userNameInput.validity.tooShort) {
@@ -104,4 +121,5 @@ centerElement(modalRecall);
 
 modalRecallButton.addEventListener('click', function() {
   closePopup(modalRecall)
+  closeOverlay()
 })

@@ -1,28 +1,28 @@
-// POPUP
+// POPUP_1
 
 let orderCallLink = document.querySelector('.page-header__order');
-let modalCall = document.querySelector('.modal-call');
-let modalCallClose = modalCall.querySelector('.modal-call__close');
+let modalCall = document.querySelector('.modal--call');
+let modalCallClose = modalCall.querySelector('.modal__close');
 let overlay = document.querySelector('.overlay');
 
 let onEscPress = function(evt) {
   if (evt.key === 'Escape') {
-    closePopup();
+    closePopup(modalCall);
 }}
 
-let openPopup = function() {
-  modalCall.classList.add('modal-call--open');
+let openPopup = function(popup) {
+  popup.classList.add('modal--open');
   overlay.classList.add('overlay--show');
 
   document.addEventListener('keydown', onEscPress);
-  overlay.addEventListener('click', closePopup);
+  overlay.addEventListener('click', closePopup(modalCall));
 }
 
-let closePopup = function() {
-  modalCall.classList.remove('modal-call--open');
+let closePopup = function(popup) {
+  popup.classList.remove('modal--open');
   overlay.classList.remove('overlay--show');
   document.removeEventListener('keydown', onEscPress);
-  overlay.removeEventListener('click', closePopup);
+  overlay.removeEventListener('click', closePopup(modalCall));
 }
 
 
@@ -37,18 +37,17 @@ let centerElement = function(element) {
 }
 
 orderCallLink.addEventListener('click', function() {
-  openPopup();
+  openPopup(modalCall);
   centerElement(modalCall);
 })
 
 modalCallClose.addEventListener('click', function(){
-  closePopup();
+  closePopup(modalCall);
 })
 
 // ICON-CROSS HOVER&ACTIVE
 
-let crossIcon = modalCallClose.querySelector('.modal-call__icon');
-console.log(crossIcon);
+let crossIcon = modalCallClose.querySelector('.modal__icon');
 let crossPath = crossIcon.querySelector('path');
 
 let highlightCross = function() {
@@ -90,4 +89,18 @@ userNameInput.setCustomValidity('Имя минимум из 2 символов')
 
 $(".form__input--phone").mask("8 (999) 999 99 99");
 
+//POPUP_2
 
+let modalRecall = document.querySelector('.modal--recall');
+let modalRecallButton = modalRecall.querySelector('.modal__button');
+
+form.addEventListener('submit', function(evt) {
+  evt.preventDefault();
+openPopup(modalRecall);
+closePopup(modalCall);
+centerElement(modalRecall);
+})
+
+modalRecallButton.addEventListener('click', function() {
+  closePopup(modalRecall)
+})
