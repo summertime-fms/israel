@@ -1,9 +1,21 @@
 // POPUP_1
+let body = document.querySelector("body");
 
 let orderCallLink = document.querySelector('.page-header__order');
 let modalCall = document.querySelector('.modal--call');
-let modalCallClose = modalCall.querySelector('.modal__close');
+let modalClose = document.querySelectorAll('.modal__close');
 let overlay = document.querySelector('.overlay');
+let modalRecall = document.querySelector('.modal--recall');
+
+
+let isStorageSupport = true;
+let storage = "";
+
+  try {
+    storage = localStorage.getItem("login");
+  } catch (err) {
+    isStorageSupport = false;
+  }
 
 
 
@@ -15,6 +27,10 @@ let onEscPress = function(evt) {
 
 let openPopup = function(popup) {
   popup.classList.add('modal--open');
+  body.style.overflowY = "hidden"
+  if (storage) {
+    userNameInput.value = storage;
+  }
   userNameInput.focus();
   document.addEventListener('keydown', onEscPress);
 }
@@ -30,6 +46,10 @@ let openOverlay = function() {
 
 let closePopup = function(popup) {
   popup.classList.remove('modal--open');
+
+  if(popup.classList.contains('modal--recall')) {
+    body.style.overflowY = 'visible';
+  }
   document.removeEventListener('keydown', onEscPress);
 }
 
@@ -55,39 +75,44 @@ orderCallLink.addEventListener('click', function() {
   openOverlay();
 })
 
-modalCallClose.addEventListener('click', function() {
+for (let i = 0; i < modalClose.length; i++) {
+
+modalClose[i].addEventListener('click', function() {
   closePopup(modalCall);
+  closePopup(modalRecall)
   closeOverlay();
 })
+}
 
 // ICON-CROSS HOVER&ACTIVE
 
-let crossIcon = modalCallClose.querySelector('.modal__icon');
-console.log(crossIcon);
-let crossPath = crossIcon.querySelector('path');
+// let crossIcon = modalCallClose.querySelector('.modal__icon');
+// console.log(crossIcon);
+// let crossPath = crossIcon.querySelector('path');
 
-let highlightCross = function() {
-  crossPath.setAttribute('fill', 'url(#linear-hover)');
-}
+// let highlightCross = function() {
+//   crossPath.setAttribute('fill', 'url(#linear-hover)');
+// }
 
-let lightoutCross = function() {
-  crossPath.setAttribute('fill', 'url(#linear)');
-}
+// let lightoutCross = function() {
+//   crossPath.setAttribute('fill', 'url(#linear)');
+// }
 
-crossIcon.addEventListener('mouseover', function() {
-  highlightCross();
-})
+// crossIcon.addEventListener('mouseover', function() {
+//   highlightCross();
+// })
 
-crossIcon.addEventListener('mouseout', function() {
-  lightoutCross();
-})
+// crossIcon.addEventListener('mouseout', function() {
+//   lightoutCross();
+// })
 
 
 // VALIDATION
 
 let form = document.querySelector('.form');
 let userNameInput = form.querySelector('.form__input--name');
-
+let userPhoneInput = form.querySelector('.form__input--phone');
+console.log(userPhoneInput);
 
 
 userNameInput.addEventListener('invalid', function(evt) {
@@ -109,11 +134,13 @@ $(".form__input--phone").mask("8 (999) 999 99 99");
 
 //POPUP_2
 
-let modalRecall = document.querySelector('.modal--recall');
+
 let modalRecallButton = modalRecall.querySelector('.modal__button');
 
 form.addEventListener('submit', function(evt) {
   evt.preventDefault();
+  localStorage.setItem('name', userNameInput.value);
+  localStorage.setItem ('phoneNumber', userPhoneInput.value);
 openPopup(modalRecall);
 closePopup(modalCall);
 centerElement(modalRecall);
