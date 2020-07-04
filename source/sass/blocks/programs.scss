@@ -1,5 +1,15 @@
 .programs {
+  background-image: url("../img/programs-sketch@1x.png");
+  background-size: 50% auto;
+
+  background-repeat: no-repeat;
+  background-position: 100% 25%;
   padding-top: 102px;
+  padding-bottom: 70px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/programs-sketch@2x.png");
+  }
 }
 
 .programs__wrapper {
@@ -8,7 +18,7 @@
 }
 
 .programs__title {
-  margin-bottom: 70px;
+  margin-bottom: 64px;
 }
 
 .programs__inner {
@@ -52,7 +62,7 @@
 }
 
 .programs__tab {
-  padding: 15px 0 15px 20px;
+  padding: 15px 0 15px 24px;
   cursor: pointer;
   font-weight: 400;
 
@@ -65,14 +75,20 @@
   min-height: 68px;
   min-width: 230px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+}
 
-  &:hover {
-    & svg {
-      fill: url("#gradient");
-    }
-  }
+.programs__tab-icon {
+  width: 35px;
+  height: 35px;
+  margin-right: 24px;
+
+  background-image: url("../img/sprite.png");
+}
+
+.programs__tab-icon--common {
+  background-position: 30px 30px;
 }
 
 .programs__tab--active {
@@ -115,5 +131,98 @@
 
   & svg {
     fill: #ffffff;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $tablet-maxWidth) {
+  .programs {
+    padding-top: 30px;
+  }
+
+  .programs__wrapper {
+    @include tablet-container;
+  }
+
+  .programs__title {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: $mobile-maxWidth) {
+  .programs__wrapper {
+    padding: 0;
+    margin: 0;
+    max-width: unset;
+    min-width: 320px;
+  }
+
+  .programs__inner {
+    flex-direction: column;
+  }
+
+  .programs__list {
+    display: flex;
+    overflow-x: scroll;
+    padding-bottom: 8px;
+  }
+
+  .programs__description {
+    @include mobile-container;
+    margin: 0;
+  }
+
+  .programs__text {
+    width: unset;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .programs__tabs {
+    width: 100%;
+    padding-bottom: 18px;
+  }
+
+  .programs__tab--active {
+    border-radius: 60.6704px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .programs__tab {
+    min-height: 48px;
+    padding: 8px 10px 8px 10px;
+    min-width: unset;
+    width: min-content;
+  }
+
+  .programs__tab-icon {
+    margin-right: 8px;
+  }
+
+  .programs__title {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .programs {
+    padding-top: 33px;
+    background-size: 82% auto;
+    background-position: 115% 32%;
+  }
+
+  .programs__tab-icon--common {
+    display: none;
+  }
+
+  .programs__title-item {
+    font-size: 25px;
+    padding: 0;
+    margin: 0 0 15px;
   }
 }
