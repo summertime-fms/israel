@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   background-repeat: no-repeat;
-  background-position: 50% 30%, 50% 28%, 100% -1px;
+  background-position: 50% 0%, 50% 25%, 100% -1px;
   background-size: 100%, 74% auto, 100%;
   background-image: url("../img/girl@1x.png"), url("../img/title@1x.png"), url("../img/background-photo@1x.png");
 
@@ -17,7 +17,7 @@
 .intro__text {
   margin: 0;
   margin-bottom: 31px;
-  padding-top: 38%;
+  padding-top: 39.4%;
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
@@ -33,7 +33,7 @@
   align-items: center;
   width: 76px;
   height: 76px;
-  margin-bottom: 200px;
+  margin-bottom: 160px;
   border: 1px dashed #ffffff;
   border-radius: 50%;
 }
@@ -61,6 +61,12 @@
 
   .intro__text {
     margin-bottom: 15px;
+    font-size: 18px;
+    padding-top: 35.4%;
+  }
+
+  .intro__scroll-tip {
+    margin-bottom: 70px;
   }
 }
 
@@ -81,5 +87,9 @@
     padding-top: 94%;
     font-size: 20px;
     line-height: 24px;
+  }
+
+  .intro__scroll-tip {
+    margin-bottom: 115px;
   }
 }

@@ -131,6 +131,11 @@
   background-image: url("../img/icon-close.svg");
 }
 
+.modal__title {
+  font-size: 28px;
+  line-height: 34px;
+}
+
 @media (max-width: $mobile-maxWidth) {
   .modal {
     width: 320px;

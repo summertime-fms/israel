@@ -1,28 +1,62 @@
 // POPUP_1
+let body = document.querySelector("body");
 
 let orderCallLink = document.querySelector('.page-header__order');
 let modalCall = document.querySelector('.modal--call');
-let modalCallClose = modalCall.querySelector('.modal__close');
+let modalClose = document.querySelectorAll('.modal__close');
 let overlay = document.querySelector('.overlay');
+let modalRecall = document.querySelector('.modal--recall');
+
+
+let isStorageSupport = true;
+let storage = "";
+
+  try {
+    storage = localStorage.getItem("login");
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
+
 
 let onEscPress = function(evt) {
   if (evt.key === 'Escape') {
     closePopup(modalCall);
+    body.style.overflowY = 'visible';
+    closeOverlay();
 }}
 
 let openPopup = function(popup) {
   popup.classList.add('modal--open');
-  overlay.classList.add('overlay--show');
-
+  body.style.overflowY = "hidden"
+  if (storage) {
+    userNameInput.value = storage;
+  }
+  userNameInput.focus();
   document.addEventListener('keydown', onEscPress);
-  overlay.addEventListener('click', closePopup(modalCall));
+}
+
+let openOverlay = function() {
+  overlay.classList.add('overlay--show');
+  overlay.addEventListener('click', function() {
+    closePopup(modalCall)
+    closePopup(modalRecall)
+    closeOverlay();
+  });
 }
 
 let closePopup = function(popup) {
   popup.classList.remove('modal--open');
-  overlay.classList.remove('overlay--show');
+
+  if(popup.classList.contains('modal--recall')) {
+    body.style.overflowY = 'visible';
+  }
   document.removeEventListener('keydown', onEscPress);
-  overlay.removeEventListener('click', closePopup(modalCall));
+}
+
+let closeOverlay  = function() {
+  overlay.classList.remove('overlay--show');
+  overlay.removeEventListener('click', closePopup);
 }
 
 
@@ -39,38 +73,25 @@ let centerElement = function(element) {
 orderCallLink.addEventListener('click', function() {
   openPopup(modalCall);
   centerElement(modalCall);
+  openOverlay();
 })
 
-modalCallClose.addEventListener('click', function(){
+for (let i = 0; i < modalClose.length; i++) {
+
+modalClose[i].addEventListener('click', function() {
   closePopup(modalCall);
+  closePopup(modalRecall)
+  closeOverlay();
 })
-
-// ICON-CROSS HOVER&ACTIVE
-
-let crossIcon = modalCallClose.querySelector('.modal__icon');
-let crossPath = crossIcon.querySelector('path');
-
-let highlightCross = function() {
-  crossPath.setAttribute('fill', 'url(#linear-hover)');
 }
-
-let lightoutCross = function() {
-  crossPath.setAttribute('fill', 'url(#linear)');
-}
-
-crossIcon.addEventListener('mouseover', function() {
-  highlightCross();
-})
-
-crossIcon.addEventListener('mouseout', function() {
-  lightoutCross();
-})
-
 
 // VALIDATION
 
 let form = document.querySelector('.form');
 let userNameInput = form.querySelector('.form__input--name');
+let userPhoneInput = form.querySelector('.form__input--phone');
+console.log(userPhoneInput);
+
 
 userNameInput.addEventListener('invalid', function(evt) {
   if (userNameInput.validity.tooShort) {
@@ -91,11 +112,13 @@ $(".form__input--phone").mask("8 (999) 999 99 99");
 
 //POPUP_2
 
-let modalRecall = document.querySelector('.modal--recall');
+
 let modalRecallButton = modalRecall.querySelector('.modal__button');
 
 form.addEventListener('submit', function(evt) {
   evt.preventDefault();
+  localStorage.setItem('name', userNameInput.value);
+  localStorage.setItem ('phoneNumber', userPhoneInput.value);
 openPopup(modalRecall);
 closePopup(modalCall);
 centerElement(modalRecall);
@@ -103,4 +126,35 @@ centerElement(modalRecall);
 
 modalRecallButton.addEventListener('click', function() {
   closePopup(modalRecall)
+  closeOverlay()
 })
+
+// TABS
+
+let tabs = document.querySelectorAll('.programs__tab');
+let items = document.querySelectorAll('.programs__item');
+
+let highlightTab = function(tab) {
+  for (let i = 0; i < tabs.length; i++) {
+    if(tabs[i].classList.contains('programs__tab--active')) {
+      tabs[i].classList.remove('programs__tab--active')
+    }
+  }
+  tab.classList.add('programs__tab--active')
+}
+let showItem = function(item) {
+for (let i = 0; i < items.length; i++) {
+  if(items[i].classList.contains('programs__item--active')) {
+    items[i].classList.remove('programs__item--active');
+  }
+}
+item.classList.add('programs__item--active')
+
+}
+
+for (let i = 0; i < tabs.length; i++) {
+  tabs[i].addEventListener('click', function() {
+    showItem(items[i]);
+    highlightTab(tabs[i]);
+  })
+}

@@ -1,10 +1,24 @@
 .title {
-
   margin: 0;
-  font-size: 28px;
-  line-height: 34px;
-  letter-spacing: -0.02em;
+  font-size: 40px;
+  line-height: 49px;
+  letter-spacing: 0.05em;
   color: $titles-color;
   font-family: $titles-font;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@media (min-width: $tablet-width) and (max-width: $tablet-maxWidth) {
+  .title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: $mobile-maxWidth) {
+  .title {
+    font-size: 32px;
+    line-height: 39px;
+  }
 }
 

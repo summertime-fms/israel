@@ -22,6 +22,7 @@ let storage = "";
 let onEscPress = function(evt) {
   if (evt.key === 'Escape') {
     closePopup(modalCall);
+    body.style.overflowY = 'visible';
     closeOverlay();
 }}
 
@@ -84,29 +85,6 @@ modalClose[i].addEventListener('click', function() {
 })
 }
 
-// ICON-CROSS HOVER&ACTIVE
-
-// let crossIcon = modalCallClose.querySelector('.modal__icon');
-// console.log(crossIcon);
-// let crossPath = crossIcon.querySelector('path');
-
-// let highlightCross = function() {
-//   crossPath.setAttribute('fill', 'url(#linear-hover)');
-// }
-
-// let lightoutCross = function() {
-//   crossPath.setAttribute('fill', 'url(#linear)');
-// }
-
-// crossIcon.addEventListener('mouseover', function() {
-//   highlightCross();
-// })
-
-// crossIcon.addEventListener('mouseout', function() {
-//   lightoutCross();
-// })
-
-
 // VALIDATION
 
 let form = document.querySelector('.form');
@@ -150,3 +128,33 @@ modalRecallButton.addEventListener('click', function() {
   closePopup(modalRecall)
   closeOverlay()
 })
+
+// TABS
+
+let tabs = document.querySelectorAll('.programs__tab');
+let items = document.querySelectorAll('.programs__item');
+
+let highlightTab = function(tab) {
+  for (let i = 0; i < tabs.length; i++) {
+    if(tabs[i].classList.contains('programs__tab--active')) {
+      tabs[i].classList.remove('programs__tab--active')
+    }
+  }
+  tab.classList.add('programs__tab--active')
+}
+let showItem = function(item) {
+for (let i = 0; i < items.length; i++) {
+  if(items[i].classList.contains('programs__item--active')) {
+    items[i].classList.remove('programs__item--active');
+  }
+}
+item.classList.add('programs__item--active')
+
+}
+
+for (let i = 0; i < tabs.length; i++) {
+  tabs[i].addEventListener('click', function() {
+    showItem(items[i]);
+    highlightTab(tabs[i]);
+  })
+}

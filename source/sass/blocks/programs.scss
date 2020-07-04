@@ -1,0 +1,119 @@
+.programs {
+  padding-top: 102px;
+}
+
+.programs__wrapper {
+  @include desktop-container;
+  padding: 0 210px;
+}
+
+.programs__title {
+  margin-bottom: 70px;
+}
+
+.programs__inner {
+  display: flex;
+}
+
+
+.programs__title-item {
+  margin: 0;
+  margin-bottom: 24px;
+  padding-top: 13px;
+  text-transform: none;
+  font-size: 28px;
+  line-height: 34px;
+}
+
+.programs__item {
+  display: none;
+}
+
+.programs__item--active {
+  display: block;
+}
+
+.programs__text {
+  width: 85%;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+  opacity: 0.87;
+}
+
+.programs__list {
+  @include list-reset;
+}
+
+.programs__tabs {
+  margin-right: 62px;
+  width: 230px;
+}
+
+.programs__tab {
+  padding: 15px 0 15px 20px;
+  cursor: pointer;
+  font-weight: 400;
+
+  font-size: 15px;
+  line-height: 18px;
+
+  color: #484848;
+  opacity: 0.87;
+
+  min-height: 68px;
+  min-width: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    & svg {
+      fill: url("#gradient");
+    }
+  }
+}
+
+.programs__tab--active {
+  position: relative;
+  background: $yellow-gradient;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  font-variant: small-caps;
+
+
+  text-transform: lowercase;
+
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 34px solid #ffffff;
+    border-left: 30px solid transparent;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 34px solid #ffffff;
+    border-left: 30px solid transparent;
+  }
+
+  & svg {
+    fill: #ffffff;
+  }
+}
