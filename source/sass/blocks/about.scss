@@ -141,7 +141,8 @@
   .about {
     background-position: 50% 50%;
     background-size: 140% auto;
-    padding-bottom: 50px;
+    padding-bottom: 49px;
+    padding-top: 27px;
   }
 
   .about__wrapper {
@@ -149,12 +150,11 @@
   }
 
   .about__title {
-    margin-bottom: 22px;
+    margin-bottom: 24px;
   }
 
 
   .about__video {
-    min-width: 320px;
     width: 100%;
     mask-position: 80%;
     height: 220px;

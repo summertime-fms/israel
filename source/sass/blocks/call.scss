@@ -101,8 +101,12 @@
   .call {
     display: flex;
     flex-direction: column;
-    padding-top: 47px;
+    padding-top: 45px;
+    padding-bottom: 30px;
     text-align: center;
+    background-position: -3px -0.5%;
+    background-repeat: no-repeat;
+    background-size: 33% auto;
   }
 
   .call__text {
@@ -121,14 +125,16 @@
 
   .call__form button {
     position: static;
-    margin-top: 5px;
+    margin-top: 9px;
     width: 90%;
+    padding-bottom: 19px;
   }
 
   .call__image {
     position: relative;
     width: 100%;
     height: 97vw;
+    top: 0;
     background-size: 133%;
     background-position: center;
   }

@@ -189,8 +189,23 @@
     padding-bottom: 18px;
   }
 
+
+  .programs__tab {
+    min-height: 48px;
+    padding: 0 10px;
+    min-width: unset;
+    width: min-content;
+
+    & svg {
+      fill: #999999;
+    }
+  }
+
   .programs__tab--active {
     border-radius: 60.6704px;
+    height: 50px;
+    padding: 0 12px;
+
 
     &::before {
       display: none;
@@ -199,17 +214,15 @@
     &::after {
       display: none;
     }
+
+    & svg {
+      fill: #ffffff;
+    }
   }
 
-  .programs__tab {
-    min-height: 48px;
-    padding: 8px 10px 8px 10px;
-    min-width: unset;
-    width: min-content;
-  }
 
   .programs__tab-icon {
-    margin-right: 8px;
+    margin-right: 5px;
   }
 
   .programs__title {
@@ -219,8 +232,8 @@
 
   .programs {
     padding-top: 33px;
-    background-size: 82% auto;
-    background-position: 115% 32%;
+    background-size: 99% auto;
+    background-position: 810% 38%;
   }
 
   .programs__tab-icon--common {
@@ -228,7 +241,7 @@
   }
 
   .programs__title-item {
-    font-size: 25px;
+    font-size: 24px;
     padding: 0;
     margin: 0 0 15px;
   }
