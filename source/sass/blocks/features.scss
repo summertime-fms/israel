@@ -24,71 +24,97 @@
 .features__content {
   position: relative;
   z-index: -2;
+  width: 100%;
+  height: 741px;
 }
 
 .features__item--excursions {
-  top: -68px;
+  top: -69px;
   left: 0;
-  width: 35.286vw;
-  height: 53.587vw;
+  width: 41.86%;
+  height: 100%;
   background-image: url("../img/blog-photo1@1x.jpg");
-  background-size: 35.286vw auto;
+  background-size: 100% auto;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/blog-photo1@2x.jpg");
   }
+
+  & h3 {
+    bottom: 20px;
+  }
 }
 
 .features__item--skills {
-  width: 30.08vw;
-  height: 23.35vw;
-  top: 0;
-  left: 54vw;
+  width: 35.67%;
+  height: 42.93%;
+  top: -2px;
+  left: 64.06%;
   background-image: url("../img/blog-photo3@1x.jpg");
-  background-size: 30.08vw auto;
+  background-size: 100% auto;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/blog-photo3@2x.jpg");
   }
+
+  & h3 {
+    bottom: 11px;
+    padding-left: 32px;
+  }
 }
 
 .features__item--language {
-  top: 0;
-  left: 36.41vw;
+  top: -2px;
+  left: 43.14%;
   background-image: url("../img/blog-photo2@1x.jpg");
-
-  background-size: 15.44vw auto;
-  width: 15.44vw;
-  height: 23.35vw;
+  background-size: 100% auto;
+  height: 43.1%;
+  width: 18.31%;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/blog-photo2@2x.jpg");
   }
+
+  & h3 {
+    bottom: 11px;
+    padding-left: 25px;
+  }
 }
 
 .features__item--projects {
-  width: 30.08vw;
-  top: 25.2vw;
-  left: 36.41vw;
+  width: 35.67%;
+  height: 42.93%;
+  top: 46.7%;
+  left: 43.14%;
   background-image: url("../img/blog-photo4@1x.jpg");
-  background-size: 30.08vw auto;
-  height: 23.4vw;
+  background-size: 100% auto;
+
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/blog-photo4@2x.jpg");
   }
+
+  & h3 {
+    bottom: 11px;
+    padding-left: 32px;
+  }
 }
 
 .features__item--leadership {
-  left: 69vw;
-  top: 25.2vw;
-  width: 15.44vw;
-  height: 23.35vw;
+  left: 81.42%;
+  top: 46.75%;
+  height: 42%;
+  width: 18.57%;
   background-image: url("../img/blog-photo5@1x.jpg");
-  background-size: 15.44vw auto;
+  background-size: 100% auto;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/blog-photo5@2x.jpg");
+  }
+
+  & h3 {
+    bottom: 4px;
+    padding-left: 24px;
   }
 }
 
@@ -99,9 +125,13 @@
   bottom: 35px;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
 
-  font-size: 20px;
+  font-size: 21px;
   line-height: 25px;
   font-family: "Raleway", "Arial", sans-serif;
+}
+
+.features__container {
+  width: 100%;
 }
 
 .features__item {
