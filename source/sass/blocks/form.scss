@@ -33,13 +33,13 @@
   font-weight: 600;
   padding-left: 40px;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 16px;
 
   &:focus {
     outline: none;
     border-color: transparent;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 17px;
+    padding-bottom: 17px;
 
     & ~ .form__input-focused {
       display: block;

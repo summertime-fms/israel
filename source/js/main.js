@@ -22,6 +22,7 @@ let storage = "";
 let onEscPress = function(evt) {
   if (evt.key === 'Escape') {
     closePopup(modalCall);
+    closePopup(modalRecall)
     body.style.overflowY = 'visible';
     closeOverlay();
 }}
@@ -158,3 +159,15 @@ for (let i = 0; i < tabs.length; i++) {
     highlightTab(tabs[i]);
   })
 }
+
+
+//CALL BUTTON POPUP
+
+let callMeForm = document.querySelector('.call__form');
+
+callMeForm.addEventListener('submit', function(evt) {
+  evt.preventDefault();
+  openPopup(modalRecall)
+  openOverlay();
+  centerElement(modalRecall);
+})

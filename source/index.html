@@ -10,7 +10,7 @@
   <title>Израиль</title>
 </head>
 <body>
-  <div style="display: none;">
+  <div class="visually-hidden">
     <include src="build/img/sprite_auto.svg"></include>
   </div>
  <header class="page-header">
@@ -63,11 +63,12 @@
    <section class="about">
      <div class="about__wrapper">
       <h2 class="about__title title">О программе</h2>
-      <p class="about__text">«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
-    </div>
+      <p class="about__text">«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. &nbsp&nbsp Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
+
       <div class="about__video">
         <button class="about__play-button" type="button" aria-label="Смотреть видео"></button>
         </div>
+      </div>
    </section>
     <section class="programs">
       <div class="programs__wrapper">
@@ -76,33 +77,33 @@
           <div class="programs__tabs">
             <ul class="programs__list">
               <li class="programs__tab">
-                <div class="programs__tab-icon programs__tab-icon--common" >
-
-                </div>
+                <svg class="programs__tab-icon programs__tab-icon--common" width="28" height="33" >
+                  <use xlink:href="#icon-star"></use>
+                </svg>
                 <span>Общие</span>
               </li>
               <li class="programs__tab programs__tab--active">
-                <div class="programs__tab-icon programs__tab-icon--study">
-
-                </div>
+                <svg class="programs__tab-icon programs__tab-icon--study" width="36" height="35">
+                  <use xlink:href="#icon-student"></use>
+                </svg>
                 <span>Академические</span>
               </li>
               <li class="programs__tab">
-                <div class="programs__tab-icon programs__tab-icon--intentship">
-
-                </div>
+                <svg class="programs__tab-icon programs__tab-icon--intentship" width="32" height="25">
+                  <use xlink:href="#icon-case"></use>
+                </svg>
                 <span>Стажировки</span>
               </li>
               <li class="programs__tab">
-                <div class="programs__tab-icon programs__tab-icon--volunteur">
-
-                </div>
+                <svg class="programs__tab-icon programs__tab-icon--volunteur" width="32" height="29">
+                  <use xlink:href="#icon-volunteur"></use>
+                </svg>
                 <span>Волонтерство</span>
               </li>
               <li class="programs__tab">
-                <div class="programs__tab-icon programs__tab-icon--religion">
-
-                </div>
+                <svg class="programs__tab-icon programs__tab-icon--religion" width="23" height="25">
+                  <use xlink:href="#icon-religion"></use>
+                </svg>
                 <span>Религиозные</span>
                 </li>
             </ul>
@@ -126,7 +127,7 @@
                 Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
               </p>
               <p class="programs__text">
-                Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства?
+                Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства?
                 Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде
               </p>
             </article>
@@ -137,7 +138,7 @@
                 Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
               </p>
               <p class="programs__text">
-                Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства?
+                Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательногои делового администрирования или искусства?
                 Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде
               </p>
             </article>
@@ -148,7 +149,7 @@
                 Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
               </p>
               <p class="programs__text">
-                Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства?
+                Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства?
                 Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде
               </p>
             </article>
@@ -159,7 +160,7 @@
                 Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
               </p>
               <p class="programs__text">
-                Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства?
+                Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства?
                 Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде
               </p>
             </article>
@@ -167,6 +168,86 @@
         </div>
      </div>
    </section>
+   <section class="call">
+     <div class="call__wrapper">
+       <h2 class="title call__title">Хочу поехать!</h2>
+       <p class="call__text">Оставьте свой телефон и мы свяжемся с вами,<br> подберём куратора и ответим на все вопросы!</p>
+       <form class="call__form form">
+        <div class="form__input-wrapper">
+          <input class="form__input form__input--phone" type="tel" name="phone-number" value="" placeholder="Телефон" title="В формате +7 (ХХХ) ХХХ-ХХ-ХХ" required>
+          <span class="form__input-focused"></span>
+          </div>
+          <button class="form__button button" type="submit">Перезвоните мне</button>
+       </form>
+     </div>
+     <div class="call__image"></div>
+   </section>
+<section class="expectations">
+  <div class="expectations__wrapper">
+    <div class="expectations__image"></div>
+    <div class="expectations__inner">
+      <h2 class="title expectations__title">Как поехать</h2>
+      <p class="expectations__text">
+        Чтобы узнать подробнее о программе, свяжитесь с координатором в вашем городе.
+        Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.
+      </p>
+      <strong class="expectations__list-heading">
+        Чтобы иметь возможность получить грант на обучение от&nbsp4200 до 8400$, вы должны:
+      </strong>
+      <ul class="expectations__list">
+        <li class="expectations__item">
+          Быть в возрасте от 16 до 30 лет
+        </li>
+        <li class="expectations__item">
+          Иметь оконченное среднее образование
+        </li>
+        <li class="expectations__item">
+          Иметь документально подтверждённые еврейские корни и пройти консульскую проверку
+        </li>
+        <li class="expectations__item">
+          За последние 2 года быть не больше 3х месяцев подряд непрерывно в Израиле
+        </li>
+      </ul>
+      <p class="expectations__notion">
+        Если вы не подходите по этим правилам, вы всё равно можете принять участие в программе «Маса», оплатив её полную стоимость.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="features">
+  <div class="features__wrapper">
+    <h2 class="features__title title">Жизнь в израиле</h2>
+    <p class="features__text">
+      Помимо учёбы, в рамках программе у вас будет возможность путешествовать по стране и&nbspпознакомиться с богатой культурно-исторической жизнью Израиля и его жителей.
+    </p>
+    <div class="features__container">
+    <div class="features__content swiper-wrapper">
+      <div class="features__item features__item--excursions">
+        <h3 class="features__item-title">Экскурсии по Израилю<br> и знакомство с его историей</h3>
+        <img class="features__image" src="img/blog-photo1@1x.jpg" srcset="img/blog-photo1@2x.jpg 2x" width="482" height="732" alt="Экскурсии по Израилю">
+      </div>
+      <div class="features__item features__item--language">
+        <h3 class="features__item-title">Изучение иврита</h3>
+        <img class="features_image" src="img/blog-photo2@1x.jpg" srcset="img/blog-photo2@2x.jpg 2x" width="211" height="318" alt="Изучение иврита">
+      </div>
+      <div class="features__item features__item--skills">
+        <h3 class="features__item-title">Обучение современным навыкам и профессиям</h3>
+        <img class="features__image" src="img/blog-photo3@1x.jpg" srcset="img/blog-photo3@2x.jpg 2x" width="411" height="318" alt="Обучение профессиям">
+      </div>
+      <div class="features__item features__item--projects">
+        <h3 class="features__item-title">Совместные творческие проекты с израильской молодёжью</h3>
+        <img class="features__image" src="img/blog-photo4@1x.jpg" srcset="img/blog-photo4@2x.jpg 2x" width="411" height="318" alt="Совместные проекты">
+      </div>
+      <div class="features__item features__item--leadership">
+        <h3 class="features__item-title">Развитие лидерства</h3>
+        <img class="features__image" src="img/blog-photo5@1x.jpg" srcset="img/blog-photo5@2x.jpg 2x" width="211" height="318" alt="Развитие лидерства">
+
+      </div>
+      <div class="features__pagination"></div>
+</div>
+    </div>
+  </div>
+</section>
  </main>
  <footer class="page-footer"></footer>
  <div class="overlay"></div>

@@ -1,0 +1,140 @@
+.call {
+  display: flex;
+  position: relative;
+  padding-bottom: 85px;
+  background-image: url("../img/form-sketch@1x.png");
+  background-position: 0% 30.5%;
+  background-repeat: no-repeat;
+  background-size: 11% auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/form-sketch@2x.png");
+  }
+}
+
+.call__wrapper {
+  margin-left: 15.35%;
+  width: 475px;
+  padding-top: 202px;
+  padding-bottom: 140px;
+}
+
+.call__title {
+  margin-bottom: 24px;
+}
+
+.call__image {
+  width: 60%;
+  right: 0;
+  top: -9px;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background-image: url("../img/girl-flag@1x.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/girl-flag@2x.png");
+  }
+}
+
+.call__text {
+  margin: 0;
+  margin-bottom: 63px;
+  font-size: 17px;
+  line-height: 1.7;
+  opacity: 0.87;
+}
+
+.call__form {
+  display: flex;
+  position: relative;
+}
+
+.call__form input {
+  width: 100%;
+}
+
+
+.call button {
+  position: absolute;
+  right: 0;
+  padding: 20px 0;
+  min-width: 215px;
+}
+
+.call .form__input-wrapper {
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) and (max-width: $tablet-maxWidth) {
+  .call__image {
+    top: 20px;
+  }
+
+  .call__wrapper {
+    padding-top: 30px;
+  }
+
+  .call__text {
+    text-align: left;
+  }
+
+  .call__form {
+    flex-direction: column;
+    width: 67%;
+  }
+
+  .call__form button {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .call__title {
+    text-align: left;
+  }
+}
+
+@media (max-width: $mobile-maxWidth) {
+  .call {
+    display: flex;
+    flex-direction: column;
+    padding-top: 47px;
+    text-align: center;
+  }
+
+  .call__text {
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  .call__wrapper {
+    margin: 0;
+    width: unset;
+
+    @include mobile-container;
+  }
+
+  .call__form button {
+    position: static;
+    margin-top: 5px;
+    width: 90%;
+  }
+
+  .call__image {
+    position: relative;
+    width: 100%;
+    height: 97vw;
+    background-size: 133%;
+    background-position: center;
+  }
+
+  .call__form {
+    flex-direction: column;
+    align-items: center;
+  }
+}

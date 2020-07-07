@@ -1,0 +1,91 @@
+.features__wrapper {
+  @include desktop-container;
+  padding-left: 104px;
+}
+
+.features {
+  padding-top: 156px;
+}
+
+.features__title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.features__text {
+  padding: 0 210px;
+  text-align: center;
+  font-size: 17px;
+  line-height: 1.7;
+  opacity: 0.87;
+  margin-bottom: 49px;
+}
+
+.features__content {
+  gap: 10px;
+  position: relative;
+  z-index: -2;
+  margin-top: -75px;
+  height: 732px;
+  display: grid;
+
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.features__item--excursions {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.features__item--skills {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 4;
+  grid-column-end: 6;
+  margin-top: 73px;
+}
+
+.features__item--language {
+  margin-top: 73px;
+}
+
+.features__item--projects {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.features__item-title {
+  padding-left: 40px;
+  position: absolute;
+  color: #ffffff;
+  bottom: 35px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+
+  font-size: 20px;
+  line-height: 25px;
+  font-family: "Raleway", "Arial", sans-serif;
+}
+
+.features__item {
+  position: relative;
+}
+
+@media (max-width: $mobile-maxWidth) {
+  .features__wrapper {
+    @include mobile-container;
+  }
+
+  .features__text {
+    padding: 0;
+  }
+
+  .features__item-title {
+    padding-left: 0;
+    position: initial;
+  }
+}

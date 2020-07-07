@@ -1,0 +1,146 @@
+.expectations {
+  background-image: url("../img/expectations-watercolor@1x.jpg");
+  background-position: 0 31%;
+  background-size: cover;
+  padding-top: 85px;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/expectations-watercolor@2x.jpg");
+  }
+}
+
+.expectations__wrapper {
+
+  display: flex;
+}
+
+.expectations__inner {
+  width: 48.9%;
+  padding-right: 170px;
+  padding-top: 13px;
+  margin-left: 91px;
+}
+
+.expectations__image {
+  padding-left: 10px;
+  width: 42.5%;
+  margin-left: 11px;
+  margin-top: -18px;
+  height: 52vw;
+  mask-image: url("../img/mask-about@1x.png");
+  mask-size: 100% auto;
+  background-size: 100% auto;
+  background-image: url("../img/expectations-photo@1x.jpg");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    mask-image: url("../img/mask-about@2x.png");
+    background-image: url("../img/expectations-photo@2x.jpg");
+  }
+}
+
+.expectations__text {
+  font-size: 15px;
+  line-height: 1.75;
+  margin-bottom: 32px;
+  padding-left: 15px;
+}
+
+.expectations__title {
+  margin-bottom: 25px;
+  padding-left: 15px;
+}
+
+.expectations__list-heading {
+  display: block;
+  padding-left: 15px;
+  margin-bottom: 25px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.expectations__item {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  line-height: 1.35;
+  color: rgba(72, 72, 72, 0.87);
+  z-index: 3;
+}
+
+.expectations__item:not(:last-of-type) {
+  padding-bottom: 40px;
+}
+
+.expectations__list {
+  @include list-reset;
+  position: relative;
+  counter-reset: item;
+  margin-bottom: 50px;
+  z-index: 3;
+
+  &::before {
+    content: "";
+    z-index: -1;
+    display: block;
+    height: calc(100% - 3px);
+    border-right: 1px dashed rgba(72, 72, 72, 0.5);
+    position: absolute;
+    left: 18px;
+  }
+}
+
+.expectations__item::before {
+  z-index: 3;
+  counter-increment: item;
+  content: counter(item);
+  display: flex;
+  margin-right: 25px;
+  border-radius: 50%;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: center;
+  background-color: #ffffff;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #ffc341;
+}
+
+.expectations__notion {
+  position: relative;
+
+  font-size: 15px;
+  line-height: 1.4;
+  opacity: 0.5;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    left: -15px;
+    background: $yellow-gradient;
+  }
+}
+
+@media (max-width: $mobile-maxWidth) {
+  .expectations {
+    background-image: none;
+  }
+
+  .expectations__image {
+    display: none;
+  }
+
+  .expectations__inner {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}

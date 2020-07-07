@@ -4,8 +4,8 @@
 
   background-repeat: no-repeat;
   background-position: 100% 25%;
-  padding-top: 102px;
-  padding-bottom: 70px;
+  padding-top: 98px;
+  padding-bottom: 20px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/programs-sketch@2x.png");
@@ -14,7 +14,8 @@
 
 .programs__wrapper {
   @include desktop-container;
-  padding: 0 210px;
+  max-width: 1166px;
+  padding: 0 110px;
 }
 
 .programs__title {
@@ -25,11 +26,10 @@
   display: flex;
 }
 
-
 .programs__title-item {
   margin: 0;
   margin-bottom: 24px;
-  padding-top: 13px;
+  padding-top: 19px;
   text-transform: none;
   font-size: 28px;
   line-height: 34px;
@@ -48,7 +48,7 @@
 
   font-size: 15px;
 
-  line-height: 1.7;
+  line-height: 1.75;
   opacity: 0.87;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .programs__tab {
-  padding: 15px 0 15px 24px;
+  padding-left: 20px;
   cursor: pointer;
   font-weight: 400;
 
@@ -72,19 +72,22 @@
   color: #484848;
   opacity: 0.87;
 
-  min-height: 68px;
+  min-height: 72.5px;
   min-width: 230px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+  &:hover svg {
+    fill: url("#paint0_linear");
+  }
 }
 
 .programs__tab-icon {
-  width: 35px;
-  height: 35px;
-  margin-right: 24px;
-
-  background-image: url("../img/sprite.png");
+  width: 37px;
+  margin-top: 8px;
+  height: 45px;
+  margin-right: 14px;
 }
 
 .programs__tab-icon--common {
@@ -99,11 +102,15 @@
   font-size: 16px;
   line-height: 19px;
   font-variant: small-caps;
-
+  min-height: 72px;
 
   text-transform: lowercase;
 
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+
+  &:hover svg {
+    fill: #ffffff;
+  }
 
   &::before {
     content: "";
@@ -113,7 +120,7 @@
     top: 0;
     width: 0;
     height: 0;
-    border-top: 34px solid #ffffff;
+    border-top: 36px solid #ffffff;
     border-left: 30px solid transparent;
   }
 
@@ -125,7 +132,7 @@
     bottom: 0;
     width: 0;
     height: 0;
-    border-bottom: 34px solid #ffffff;
+    border-bottom: 36px solid #ffffff;
     border-left: 30px solid transparent;
   }
 
