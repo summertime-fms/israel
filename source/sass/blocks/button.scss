@@ -1,5 +1,7 @@
 .button {
+  display: block;
   min-width: 265px;
+  max-width: 365px;
   background: $yellow-gradient;
   border-radius: 80px;
   text-transform: lowercase;

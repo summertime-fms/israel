@@ -1,0 +1,71 @@
+.gallery {
+  background-image: url("../img/gallery-background@1x.jpg");
+  background-size: 100%;
+  height: 42.7vw;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/gallery-background@2x.jpg");
+  }
+}
+
+.gallery__wrapper {
+  @include desktop-container;
+  padding-top: 120px;
+  position: relative;
+  padding-bottom: 195px;
+}
+
+.gallery__content {
+  position: relative;
+  width: 34%;
+  left: 60%;
+}
+
+.gallery__text {
+  margin: 0;
+  margin-bottom: 50px;
+  font-size: 17px;
+  line-height: 170%;
+  color: #ffffff;
+
+  opacity: 0.87;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.gallery__tag {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.gallery__button {
+  min-width: 230px;
+  width: 50%;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  font-variant: small-caps;
+
+  color: #ffffff;
+
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+@media (min-width: $tablet-width) and (max-width: $tablet-maxWidth) {
+  .gallery {
+    background-size: cover;
+    height: 56.7vw;
+  }
+
+  .gallery__tag {
+    margin-bottom: 15px;
+  }
+
+  .gallery__text {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+
+  .gallery__content {
+    width: 50%;
+  }
+}

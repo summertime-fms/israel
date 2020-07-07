@@ -172,7 +172,9 @@ callMeForm.addEventListener('submit', function(evt) {
   centerElement(modalRecall);
 })
 
+let screenWidth = screen.width;
 
+if (screenWidth < 767)
 var mySwiper1 = new Swiper('.features__container', {
   loop: true,
   direction: 'horizontal',
@@ -181,3 +183,7 @@ var mySwiper1 = new Swiper('.features__container', {
     el: '.features__pagination',
   },
 });
+
+
+
+
