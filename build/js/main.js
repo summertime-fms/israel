@@ -171,3 +171,17 @@ callMeForm.addEventListener('submit', function(evt) {
   openOverlay();
   centerElement(modalRecall);
 })
+
+// SLIDER
+
+// var mySwiper = new Swiper('.features__container', {
+
+//   direction: 'horizontal',
+//   loop: true,
+//   slidesPerGroup: 1,
+//       slidesPerView: 1,
+//       spaceBetween: 40,
+//   pagination: {
+//     el: '.features__pagination',
+//   },
+// })

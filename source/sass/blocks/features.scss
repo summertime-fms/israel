@@ -22,41 +22,74 @@
 }
 
 .features__content {
-  gap: 10px;
   position: relative;
   z-index: -2;
-  margin-top: -75px;
-  height: 732px;
-  display: grid;
-
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .features__item--excursions {
-  grid-row-start: 1;
-  grid-row-end: 3;
-  grid-column-start: 1;
-  grid-column-end: 3;
+  top: -68px;
+  left: 0;
+  width: 35.286vw;
+  height: 53.587vw;
+  background-image: url("../img/blog-photo1@1x.jpg");
+  background-size: 35.286vw auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/blog-photo1@2x.jpg");
+  }
 }
 
 .features__item--skills {
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 4;
-  grid-column-end: 6;
-  margin-top: 73px;
+  width: 30.08vw;
+  height: 23.35vw;
+  top: 0;
+  left: 54vw;
+  background-image: url("../img/blog-photo3@1x.jpg");
+  background-size: 30.08vw auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/blog-photo3@2x.jpg");
+  }
 }
 
 .features__item--language {
-  margin-top: 73px;
+  top: 0;
+  left: 36.41vw;
+  background-image: url("../img/blog-photo2@1x.jpg");
+
+  background-size: 15.44vw auto;
+  width: 15.44vw;
+  height: 23.35vw;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/blog-photo2@2x.jpg");
+  }
 }
 
 .features__item--projects {
-  grid-row-start: 2;
-  grid-row-end: 3;
-  grid-column-start: 3;
-  grid-column-end: 5;
+  width: 30.08vw;
+  top: 25.2vw;
+  left: 36.41vw;
+  background-image: url("../img/blog-photo4@1x.jpg");
+  background-size: 30.08vw auto;
+  height: 23.4vw;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/blog-photo4@2x.jpg");
+  }
+}
+
+.features__item--leadership {
+  left: 69vw;
+  top: 25.2vw;
+  width: 15.44vw;
+  height: 23.35vw;
+  background-image: url("../img/blog-photo5@1x.jpg");
+  background-size: 15.44vw auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/blog-photo5@2x.jpg");
+  }
 }
 
 .features__item-title {
@@ -72,7 +105,7 @@
 }
 
 .features__item {
-  position: relative;
+  position: absolute;
 }
 
 @media (max-width: $mobile-maxWidth) {
@@ -87,5 +120,9 @@
   .features__item-title {
     padding-left: 0;
     position: initial;
+  }
+
+  .features__content {
+    display: block;
   }
 }
