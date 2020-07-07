@@ -138,6 +138,86 @@
   position: absolute;
 }
 
+@media (max-width: 1365px) {
+  .features__wrapper {
+    @include tablet-container;
+    max-width: 1365px;
+  }
+
+  .features__text {
+    padding: 0;
+  }
+
+  .features__content {
+    height: 400px;
+  }
+
+
+  .features__item--excursions {
+    top: -5vw;
+    left: 0;
+    width: 35.28vw;
+    height: 53.587vw;
+    background-size: 35.28vw auto;
+
+    & h3 {
+      bottom: 26px;
+    }
+  }
+
+  .features__item--language {
+    height: 23.2vw;
+    width: 15.44vw;
+    left: 35.5vw;
+    background-size: 15.44vw auto;
+
+    & h3 {
+      padding-left: 10%;
+    }
+  }
+
+  .features__item--skills {
+    width: 30.08vw;
+    height: 23.3vw;
+    top: -2px;
+    left: 54vw;
+    background-size: 30.08vw auto;
+
+    & h3 {
+      padding-left: 10%;
+    }
+  }
+
+  .features__item--projects {
+    width: 30.08vw;
+    height: 23.4vw;
+    top: 24vw;
+    left: 35.5vw;
+    background-size: 30.08vw auto;
+
+    & h3 {
+      padding-left: 10%;
+    }
+  }
+
+  .features__item--leadership {
+    height: 23.2vw;
+    width: 15.44vw;
+    left: 68vw;
+    top: 24vw;
+    background-size: 15.44vw;
+
+    & h3 {
+      padding-left: 10%;
+    }
+  }
+
+  .features__item-title {
+    padding-left: 10%;
+    font-size: 15px;
+  }
+}
+
 @media (max-width: $mobile-maxWidth) {
   .features__wrapper {
     @include mobile-container;
