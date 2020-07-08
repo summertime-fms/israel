@@ -10,7 +10,7 @@
 
 .gallery__wrapper {
   @include desktop-container;
-  padding-top: 120px;
+  padding-top: 8.8%;
   position: relative;
   padding-bottom: 195px;
 }
@@ -38,6 +38,7 @@
 }
 
 .gallery__button {
+  position: relative;
   min-width: 230px;
   width: 50%;
   font-weight: 500;
@@ -48,6 +49,19 @@
   color: #ffffff;
 
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 10%;
+    top: calc(50% - 12px);
+
+    width: 22px;
+    height: 22px;
+    background-image: url("../img/icon-insta.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 @media (min-width: $tablet-width) and (max-width: $tablet-maxWidth) {
@@ -73,36 +87,43 @@
 @media (max-width: $mobile-maxWidth) {
   .gallery__wrapper {
     @include mobile-container;
-    background-image: url("../img/gallery-background@1x.jpg");
-    background-size: cover;
-    background-position: 16%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/gallery-background@2x.jpg");
-    }
   }
 
   .gallery__content {
     width: 100%;
     left: unset;
+    display: flex;
+    flex-direction: column;
   }
 
   .gallery {
-    background: none;
+    background-image: url("../img/gallery-background_mobile@1x.jpg");
+    background-size: cover;
+    background-position: 16%;
+    min-height: 85vw;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/gallery-background_mobile@2x.jpg");
+    }
   }
 
   .gallery__tag {
+    text-align: center;
     font-size: 40px;
     line-height: 49px;
+    padding-bottom: 33%;
+
+    margin-top: -28px;
   }
 
   .gallery__text {
     font-size: 16px;
     line-height: 1.6;
+    margin-bottom: 60px;
   }
 
   .gallery__button {
@@ -110,5 +131,14 @@
     max-width: unset;
 
     min-width: unset;
+    align-self: center;
+
+    &::before {
+      margin-right: 10px;
+      position: static;
+      display: inline-block;
+      vertical-align: middle;
+      left: 23%;
+    }
   }
 }

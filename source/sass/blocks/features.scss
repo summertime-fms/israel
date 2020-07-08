@@ -219,6 +219,12 @@
   }
 }
 
+@media (min-width: $tablet-width) and (max-width: $tablet-maxWidth) {
+  .features {
+    padding-top: 60px;
+  }
+}
+
 @media (max-width: $mobile-maxWidth) {
   .features__wrapper {
     @include mobile-container;

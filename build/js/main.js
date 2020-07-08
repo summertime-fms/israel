@@ -185,5 +185,18 @@ var mySwiper1 = new Swiper('.features__container', {
 });
 
 
+let faqList = document.querySelector('.faq__list');
+
+faqList.addEventListener('click', function(evt) {
+  let target = evt.target;
+  if (target.classList.contains('faq__button')) {
+    target.classList.toggle('faq__button--opened')
+    let faqItem = target.parentNode;
+    let answer = faqItem.lastElementChild;
+
+    answer.classList.toggle('faq__answer--opened')
+
+  }
+})
 
 
