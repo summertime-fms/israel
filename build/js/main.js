@@ -182,6 +182,10 @@ var mySwiper1 = new Swiper('.features__container', {
   pagination: {
     el: '.features__pagination',
   },
+  slidesPerView: 1,
+      spaceBetween: 10,
+      slidesPerGroup: 1
+
 });
 
 

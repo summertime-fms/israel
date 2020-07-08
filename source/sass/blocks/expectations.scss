@@ -134,6 +134,10 @@
     display: none;
   }
 
+  .expectations {
+    padding-top: 0;
+  }
+
   .expectations__wrapper {
     @include tablet-container;
   }
@@ -206,6 +210,9 @@
   }
 
   .expectations__item {
+    font-size: 14px;
+    line-height: 1.6;
+
     &::before {
       margin-right: 15px;
     }
