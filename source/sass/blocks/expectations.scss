@@ -1,24 +1,28 @@
 .expectations {
+  background-image: url("../img/stamp@1x.png");
+}
+
+.expectations__wrapper {
+  @include desktop-container;
+  padding: 0;
+
   background-image: url("../img/expectations-watercolor@1x.jpg");
   background-position: 0 31%;
   background-size: cover;
-  padding-top: 85px;
-  background-repeat: no-repeat;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/expectations-watercolor@2x.jpg");
   }
 }
 
-.expectations__wrapper {
-
+.expectations__inner {
   display: flex;
 }
 
-.expectations__inner {
+.expectations__content {
   width: 48.9%;
   padding-right: 170px;
-  padding-top: 13px;
+  padding-top: 98px;
   margin-left: 91px;
 }
 
@@ -26,12 +30,13 @@
   padding-left: 10px;
   width: 42.5%;
   margin-left: 11px;
-  margin-top: -18px;
+  margin-top: 67px;
   height: 52vw;
   mask-image: url("../img/mask-about@1x.png");
   mask-size: 100% auto;
   background-size: 100% auto;
   background-image: url("../img/expectations-photo@1x.jpg");
+  background-repeat: no-repeat;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     mask-image: url("../img/mask-about@2x.png");
@@ -48,7 +53,7 @@
 
 .expectations__title {
   margin-bottom: 25px;
-  padding-left: 15px;
+  padding-left: 16px;
 }
 
 .expectations__list-heading {
@@ -147,6 +152,12 @@
     margin-right: 10px;
   }
 
+  .expectations__content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
   .expectations__list {
     display: flex;
     width: 100%;
@@ -184,6 +195,7 @@
 
   .expectations__wrapper {
     @include mobile-container;
+    background: none;
   }
 
   .expectations__title {
@@ -203,6 +215,12 @@
     font-size: 16px;
     margin-bottom: 23px;
     line-height: 1.66;
+  }
+
+  .expectations__content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   .expectations__list {

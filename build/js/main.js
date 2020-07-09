@@ -175,19 +175,17 @@ callMeForm.addEventListener('submit', function(evt) {
 let screenWidth = screen.width;
 
 if (screenWidth < 767)
-var mySwiper1 = new Swiper('.features__container', {
+var mySwiper = new Swiper('.features__container', {
   loop: true,
   direction: 'horizontal',
   height: 400,
   pagination: {
     el: '.features__pagination',
   },
-  slidesPerView: 1,
-      spaceBetween: 10,
-      slidesPerGroup: 1
-
 });
 
+
+// FAQ__TOGGLING
 
 let faqList = document.querySelector('.faq__list');
 
@@ -203,4 +201,20 @@ faqList.addEventListener('click', function(evt) {
   }
 })
 
+// COMMENTS__SLIDER
 
+var mySwiper1 = new Swiper('.comments__slider', {
+  direction: 'horizontal',
+  loop: true,
+  navigation: {
+    nextEl: '.comments__button--next',
+    prevEl: '.comments__button--prev',
+  },
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  spaceBetween: 0,
+  pagination: {
+    el: '.comments__pagination',
+    type: 'fraction',
+},
+})

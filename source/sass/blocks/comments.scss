@@ -1,0 +1,177 @@
+.comments__image {
+  width: 354px;
+  flex-shrink: 0;
+  margin-right: 46px;
+}
+
+.comments__image img {
+  mask-image: url("../img/mask-comments@1x.png");
+  mask-size: 102% auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    mask-image: url("../img/mask-comments@2x.png");
+  }
+}
+
+.comments__wrapper {
+  @include desktop-container;
+  padding: 0 102px;
+}
+
+.comments__title {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.comments {
+  padding-top: 127px;
+}
+
+
+.comments__slide {
+  display: flex;
+}
+
+.comments__name {
+
+  opacity: 0.74;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 9px;
+}
+
+.comments__program {
+  font-size: 15px;
+  line-height: 1.4;
+
+  color: #1fc0fc;
+  display: block;
+  margin-right: 9px;
+}
+
+.comments__program-name {
+  font-size: 15px;
+  line-height: 1.4;
+
+  opacity: 0.74;
+}
+
+.comments__details {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 14px;
+}
+
+.comments__text {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  opacity: 0.74;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.comments__text-content {
+  width: 88.51%;
+  opacity: 0.74;
+  font-size: 17px;
+  line-height: 1.75;
+
+  &:last-of-type {
+    margin: 0;
+  }
+}
+
+.comments__more {
+  margin-bottom: 51px;
+  margin-top: 16px;
+  color: #1fc0fc;
+  font-size: 17px;
+  font-language-override: 1.5;
+  text-decoration: underline;
+}
+
+
+.comments__socials {
+  @include list-reset;
+  margin-right: 80px;
+  display: flex;
+  align-self: flex-end;
+}
+
+.comments__social-item:not(:last-of-type) {
+  margin-right: 10px;
+}
+
+.comments__socials svg {
+  fill: #d6d6d6;
+}
+
+.comments__social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+
+  &:hover svg {
+    fill: #747373;
+  }
+}
+
+.comments__pagination {
+  bottom: 1px;
+  left: 35%;
+  width: unset;
+
+  font-size: 17px;
+  line-height: 1.5;
+  color: #484848;
+  opacity: 0.5;
+}
+
+.comments__button {
+  cursor: pointer;
+  padding: 0;
+
+
+  position: absolute;
+  left: 39.7%;
+  bottom: 2%;
+
+
+  width: 11px;
+  height: 11px;
+
+
+  transform: rotate(-45deg);
+  background-color: transparent;
+
+  border-top: 2px solid #dadada;
+  border-left: 2px solid #dadada;
+
+  &:hover {
+    border-color: #747373;
+  }
+
+  &:active {
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #ffd701;
+  }
+}
+
+.comments__button--next {
+  left: 41.5%;
+  transform: rotate(135deg);
+}
+
+.comments__slider {
+  position: relative;
+}
