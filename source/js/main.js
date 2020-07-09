@@ -200,3 +200,21 @@ faqList.addEventListener('click', function(evt) {
 
   }
 })
+
+// COMMENTS__SLIDER
+
+var mySwiper1 = new Swiper('.comments__slider', {
+  direction: 'horizontal',
+  loop: true,
+  navigation: {
+    nextEl: '.comments__button--next',
+    prevEl: '.comments__button--prev',
+  },
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  spaceBetween: 0,
+  pagination: {
+    el: '.comments__pagination',
+    type: 'fraction',
+},
+})

@@ -154,6 +154,13 @@
     @include mobile-container;
   }
 
+  .faq__answer {
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 0;
+    line-height: 1.6;
+  }
+
   .faq__title {
     padding-left: 0;
     text-align: center;
@@ -172,7 +179,7 @@
   .faq__item {
     width: 100%;
     padding-top: 21px;
-    padding-bottom: 14px;
+    padding-bottom: 18px;
 
     &::before {
       margin-right: 13px;
@@ -182,10 +189,11 @@
   .faq__question {
     font-size: 16px;
     line-height: 1.7;
-    flex-grow: 1;
+    width: 79%;
   }
 
   .faq__button {
     right: 0;
+    top: 37px;
   }
 }
