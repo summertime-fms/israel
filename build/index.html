@@ -682,12 +682,14 @@
         </svg>
       </div>
     </div>
-    <div class="details__form">
+    <div class="details__form-wrapper">
+
       <div class="details__form-text">
         <b>Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</b>
         <p class="details__form-notion">Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</p>
       </div>
       <form class="form details__form" action="#" method="post" autocomplete="off">
+        <div class="details__form-group">
         <div class="form__input-wrapper">
           <input class="form__input form__input--name" type="text" name="username" value="" minlength="2" maxlength="25" placeholder="Имя" focused="" required="">
           <span class="form__input-focused"></span>
@@ -695,6 +697,7 @@
           <div class="form__input-wrapper">
           <input class="form__input form__input--phone" type="tel" name="phone-number" value="" placeholder="Телефон" title="В формате +7 (ХХХ) ХХХ-ХХ-ХХ" required="">
           <span class="form__input-focused"></span>
+          </div>
           </div>
           <button class="form__button details__form-button button" type="submit">Перезвоните мне</button>
       </form>

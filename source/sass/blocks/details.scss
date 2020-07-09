@@ -13,7 +13,8 @@
 }
 
 .details__map {
-  width: 702px;
+  width: 51.4vw;
+  max-width: 702px;
 }
 
 .details__curator-photo {
@@ -172,7 +173,10 @@
 }
 
 .details__form .form__input-wrapper {
-  width: 31.6%;
+  width: 45%;
+}
+
+.details__form .form__input-wrapper:not(:last-of-type) {
   margin-right: 30px;
 }
 
@@ -180,6 +184,76 @@
   width: 100%;
 }
 
-.details__button {
+
+.details__form-group {
+  display: flex;
+}
+
+.details__form-wrapper {
+  display: flex;
+}
+
+
+.details__form-button {
+  max-width: unset;
   min-width: 215px;
+}
+
+@media (min-width: $tablet-width) and (max-width: $tablet-maxWidth) {
+  .details__wrapper {
+    @include tablet-container;
+  }
+
+  .details__contacts {
+    flex-direction: column;
+  }
+
+  .details__notion p {
+    font-size: 15px;
+  }
+
+  .details__curator {
+    margin-bottom: 70px;
+  }
+
+  .details__map {
+    width: 100%;
+  }
+
+  .details__form {
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+
+  .details__form-text {
+    width: 100%;
+  }
+
+  .details__form-wrapper {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .form__input-wrapper {
+    flex-grow: 1;
+  }
+
+  .details__form .form__input-wrapper {
+    margin: 0;
+  }
+
+  .form__input-wrapper:not(:last-of-type) {
+    margin: 0;
+    margin-right: 25px;
+  }
+
+  .details__form-group {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .details__form-button {
+    width: 100%;
+    max-width: unset;
+  }
 }
