@@ -1,29 +1,17 @@
 
 .form__input-wrapper {
   position: relative;
+  height: 60px;
+  padding: 2px;
 
   &:not(:last-of-type) {
     margin-bottom: 10px;
   }
 }
 
-.form__input-focused {
-  content: "";
-  position: absolute;
-
-  top: -2px;
-  left: -2px;
-  bottom: -2px;
-  right: -2px;
-  background: $yellow-gradient;
-  border-radius: 80px;
-  z-index: -1;
-  display: none;
-}
-
 .form input {
   position: relative;
-  border: 2px solid #e3e3e3;
+  border: none;
   border-radius: 80px;
   text-transform: lowercase;
   font-size: 17px;
@@ -32,17 +20,15 @@
   color: rgba(72, 72, 72, 0.5);
   font-weight: 600;
   padding-left: 40px;
-  padding-top: 20px;
-  padding-bottom: 16px;
+  height: 56px;
 
   &:focus {
     outline: none;
-    border-color: transparent;
-    padding-top: 17px;
-    padding-bottom: 17px;
+    border: none;
+
 
     & ~ .form__input-focused {
-      display: block;
+      background: $yellow-gradient;
     }
 
     &::placeholder {
@@ -50,12 +36,12 @@
     }
   }
 
-  &:invalid:not(:focus):not(:placeholder-shown) {
-    border: 2px solid $error-color;
+  &:invalid:not(:focus):not(:placeholder-shown) ~ .form__input-focused {
+    background: $error-color;
   }
 
-  &:valid:not(:focus):not(:placeholder-shown) {
-    border: 2px solid #484848;
+  &:valid:not(:focus):not(:placeholder-shown) ~ .form__input-focused {
+    background: #484848;
   }
 }
 
@@ -117,3 +103,18 @@
   }
 }
 
+.form__input-focused {
+  content: "";
+  background: #e3e3e3;
+  height: 60px;
+
+  position: absolute;
+  border-radius: 80px;
+  z-index: -2;
+
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
