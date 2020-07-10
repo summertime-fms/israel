@@ -44,6 +44,7 @@
   font-size: 15px;
   line-height: 1.5;
   border-bottom: 1px dashed #1fc0fc;
+  cursor: pointer;
 }
 
 .details__curator-name {
@@ -255,5 +256,131 @@
   .details__form-button {
     width: 100%;
     max-width: unset;
+  }
+}
+
+@media (max-width: $mobile-maxWidth) {
+  .details {
+    padding-top: 25px;
+    text-align: center;
+  }
+
+  .details__wrapper {
+    padding: 0;
+  }
+
+  .details__curator {
+    @include mobile-container;
+  }
+
+  .details__title {
+    margin-bottom: 9px;
+  }
+
+  .details__contacts {
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+
+
+  .details__form-wrapper {
+    @include mobile-container;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .details__form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details__info-photo {
+    margin-bottom: 15px;
+  }
+
+  .details__info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .details__info-text {
+    text-align: left;
+  }
+
+  .details__location {
+    margin-bottom: 28px;
+  }
+
+  .details__curator-address {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .details__socials {
+    align-items: flex-end;
+  }
+
+  .details__socials-link {
+    display: block;
+    width: 14px;
+  }
+
+  .details__notion {
+    margin-bottom: 28px;
+  }
+
+  .details__notion p {
+    text-align: left;
+    width: 100%;
+    line-height: 1.55;
+  }
+
+  .details__map-wrapper {
+    margin: 0;
+    width: 100%;
+    height: 425px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .details__map {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: -48%;
+    bottom: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+
+    transform: translate(48%, 0%);
+  }
+
+  .details__form-text {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 21px;
+  }
+
+  .details__form-text b {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .details__form-group {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 21px;
+  }
+
+  .details__form .form__input-wrapper {
+    width: 100%;
+  }
+
+  .details__form-button {
+    width: 93%;
   }
 }
