@@ -91,10 +91,55 @@
 
   .footer__logo-wrapper {
     margin-bottom: 20px;
+    margin-right: 0;
+    width: 99px;
+  }
+
+  .footer__socials-item {
+    align-items: center;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    height: 32px;
+  }
+
+  .footer__socials-link {
+    align-items: center;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    height: 32px;
+  }
+
+  .footer__socials-item:not(:last-of-type) {
+    margin-right: 20px;
   }
 
   .footer__copyright {
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
+  }
+
+  .footer {
+    padding-top: 32px;
+  }
+
+  .footer__socials-icon--fb {
+    width: 14px;
+    height: 27px;
+  }
+
+  .footer__socials-icon--twitter {
+    width: 30px;
+    height: 24px;
+  }
+
+  .footer__socials-link--insta svg {
+    width: 34px;
+    height: 30px;
+  }
+
+  .footer__socials {
+    align-items: center;
   }
 }

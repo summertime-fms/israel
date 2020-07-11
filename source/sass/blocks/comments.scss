@@ -332,11 +332,9 @@
 
     &::after {
       top: 40%;
-      // background-image: url("../img/comments-sketch_mobile@1x.png");
-
-      // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      //   background-image: url("../img/comments-sketch_mobile@2x.png");
-      // }
+      background-position: 315% 330%;
+      background-size: 86% auto;
+      background-repeat: no-repeat;
     }
   }
 
