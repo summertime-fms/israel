@@ -7,6 +7,11 @@
   background-image: url("../img/video-watercolor@1x.png");
   background-repeat: no-repeat;
   background-position: 100% 100%;
+  background-size: 100% auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/video-watercolor@2x.png");
+  }
 }
 
 .about__wrapper {
@@ -40,11 +45,12 @@
   background-image: url("../img/photo_about@1x.jpg");
   background-size: contain;
   mask-image: url("../img/mask-video@1x.png");
+  mask-size: 100% auto;
   cursor: default;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/photo_about@2x.jpg");
-    mask-image: url("../img/mask-video@1x.png");
+    mask-image: url("../img/mask-video@2x.png");
   }
 }
 

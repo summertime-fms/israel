@@ -15,24 +15,24 @@ let storage = "";
     storage = localStorage.getItem("login");
   } catch (err) {
     isStorageSupport = false;
-  }
+  };
 
 
 
 let onEscPress = function(evt) {
   if (evt.key === 'Escape') {
     closePopup(modalCall);
-    closePopup(modalRecall)
+    closePopup(modalRecall);
     body.style.overflowY = 'visible';
     closeOverlay();
 }}
 
 let openPopup = function(popup) {
   popup.classList.add('modal--open');
-  body.style.overflowY = "hidden"
+  body.style.overflowY = "hidden";
   if (storage) {
     userNameInput.value = storage;
-  }
+  };
   userNameInput.focus();
   document.addEventListener('keydown', onEscPress);
 }
@@ -40,18 +40,18 @@ let openPopup = function(popup) {
 let openOverlay = function() {
   overlay.classList.add('overlay--show');
   overlay.addEventListener('click', function() {
-    closePopup(modalCall)
-    closePopup(modalRecall)
+    closePopup(modalCall);
+    closePopup(modalRecall);
     closeOverlay();
   });
-}
+};
 
 let closePopup = function(popup) {
   popup.classList.remove('modal--open');
 
   if(popup.classList.contains('modal--recall')) {
     body.style.overflowY = 'visible';
-  }
+  };
   document.removeEventListener('keydown', onEscPress);
 }
 
@@ -81,10 +81,10 @@ for (let i = 0; i < modalClose.length; i++) {
 
 modalClose[i].addEventListener('click', function() {
   closePopup(modalCall);
-  closePopup(modalRecall)
+  closePopup(modalRecall);
   closeOverlay();
-})
-}
+});
+};
 
 // VALIDATION
 
@@ -104,8 +104,8 @@ userNameInput.setCustomValidity('Имя минимум из 2 символов')
     userNameInput.setCustomValidity('Обязательное поле')
   } else {
     userNameInput.setCustomValidity('');
-  }
-})
+  };
+});
 
 //PHONE-NUMBER INPUT MASK
 
@@ -123,12 +123,12 @@ form.addEventListener('submit', function(evt) {
 openPopup(modalRecall);
 closePopup(modalCall);
 centerElement(modalRecall);
-})
+});
 
 modalRecallButton.addEventListener('click', function() {
-  closePopup(modalRecall)
-  closeOverlay()
-})
+  closePopup(modalRecall);
+  closeOverlay();
+});
 
 // TABS
 
@@ -139,26 +139,28 @@ let highlightTab = function(tab) {
   for (let i = 0; i < tabs.length; i++) {
     if(tabs[i].classList.contains('programs__tab--active')) {
       tabs[i].classList.remove('programs__tab--active')
-    }
-  }
+    };
+  };
   tab.classList.add('programs__tab--active')
-}
+};
 let showItem = function(item) {
 for (let i = 0; i < items.length; i++) {
   if(items[i].classList.contains('programs__item--active')) {
     items[i].classList.remove('programs__item--active');
-  }
-}
+  };
+};
 item.classList.add('programs__item--active')
 
-}
+};
 
 for (let i = 0; i < tabs.length; i++) {
   tabs[i].addEventListener('click', function() {
     showItem(items[i]);
     highlightTab(tabs[i]);
-  })
-}
+  });
+};
+
+let tabsBar = document.querySelector('.programs__tab-bar');
 
 
 //CALL BUTTON POPUP
@@ -167,7 +169,7 @@ let callMeForm = document.querySelector('.call__form');
 
 callMeForm.addEventListener('submit', function(evt) {
   evt.preventDefault();
-  openPopup(modalRecall)
+  openPopup(modalRecall);
   openOverlay();
   centerElement(modalRecall);
 })
@@ -175,7 +177,7 @@ callMeForm.addEventListener('submit', function(evt) {
 
 let screenWidth = screen.width;
 
-if (screenWidth < 767)
+if (screenWidth < 767) {
 var mySwiper = new Swiper('.features__container', {
   loop: true,
   direction: 'horizontal',
@@ -183,7 +185,7 @@ var mySwiper = new Swiper('.features__container', {
   pagination: {
     el: '.features__pagination',
   },
-});
+})};
 
 
 // FAQ__TOGGLING
@@ -192,23 +194,23 @@ let faqList = document.querySelector('.faq__list');
 let showAnswer = function(question) {
   let faqItem = question.parentNode;
   let answer = faqItem.lastElementChild;
-  answer.classList.toggle('faq__answer--opened')
-}
+  answer.classList.toggle('faq__answer--opened');
+};
 
 faqList.addEventListener('click', function(evt) {
   let target = evt.target;
   if (target.classList.contains('faq__button')) {
-    target.classList.toggle('faq__button--opened')
+    target.classList.toggle('faq__button--opened');
     showAnswer(target);
   } else if (target.classList.contains('faq__question')) {
-    showAnswer(target)
+    showAnswer(target);
     let parent = target.parentNode;
     let button = parent.querySelector('.faq__button');
 
 
     button.classList.toggle('faq__button--opened');
-  }
-})
+  };
+});
 
 // COMMENTS__SLIDER
 
@@ -227,13 +229,12 @@ var mySwiper1 = new Swiper('.comments__slider', {
     type: 'fraction',
 },
 simulateTouch: false,
-
 breakpoints: {
   320: {
     simulateTouch: true,
   },
 }
-})
+});
 
 // DETAILS__BUTTON POPUP
 

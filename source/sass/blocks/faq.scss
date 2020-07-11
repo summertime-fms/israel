@@ -21,6 +21,11 @@
 
 
     background-image: url("../img/case@1x.png");
+    background-size: 100% auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/case@2x.png");
+    }
   }
 }
 
@@ -100,6 +105,11 @@
   height: 803px;
   margin-top: -57px;
   background-image: url("../img/faq-photo@1x.png");
+  background-size: 100% auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/faq-photo@2x.png");
+  }
 }
 
 .faq__button {

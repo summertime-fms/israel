@@ -11,6 +11,10 @@
     background-size: 100% auto;
     top: 36%;
     right: 0;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/stamp@2x.png");
+    }
   }
 }
 

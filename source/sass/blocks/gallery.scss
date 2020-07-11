@@ -52,18 +52,12 @@
   color: #ffffff;
 
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
 
-  &::before {
-    content: "";
-    display: block;
-    margin-left: 41px;
-    margin-top: -4px;
-    margin-right: 8px;
-    width: 22px;
-    height: 22px;
-    background-image: url("../img/icon-insta.svg");
-    background-repeat: no-repeat;
-  }
+.gallery__button-icon {
+  fill: #ffffff;
+  margin-left: 30px;
+  margin-right: 20px;
 }
 
 @media (min-width: $tablet-width) and (max-width: $tablet-maxWidth) {
