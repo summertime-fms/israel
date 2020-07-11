@@ -1,5 +1,5 @@
 // POPUP_1
-let body = document.querySelector("body");
+let body = document.querySelector('body');
 
 let orderCallLink = document.querySelector('.page-header__order');
 let modalCall = document.querySelector('.modal--call');
@@ -9,10 +9,10 @@ let modalRecall = document.querySelector('.modal--recall');
 
 
 let isStorageSupport = true;
-let storage = "";
+let storage = '';
 
   try {
-    storage = localStorage.getItem("login");
+    storage = localStorage.getItem('login');
   } catch (err) {
     isStorageSupport = false;
   };
@@ -29,7 +29,7 @@ let onEscPress = function(evt) {
 
 let openPopup = function(popup) {
   popup.classList.add('modal--open');
-  body.style.overflowY = "hidden";
+  body.style.overflowY = 'hidden';
   if (storage) {
     userNameInput.value = storage;
   };
@@ -109,7 +109,7 @@ userNameInput.setCustomValidity('Имя минимум из 2 символов')
 
 //PHONE-NUMBER INPUT MASK
 
-$(".form__input--phone").mask("8 (999) 999 99 99");
+$('.form__input--phone').mask('8 (999) 999 99 99');
 
 //POPUP_2
 
@@ -177,7 +177,7 @@ callMeForm.addEventListener('submit', function(evt) {
 
 let screenWidth = screen.width;
 
-if (screenWidth < 767) {
+if (window.matchMedia('(max-width: 767px)').matches) {
 var mySwiper = new Swiper('.features__container', {
   loop: true,
   direction: 'horizontal',
