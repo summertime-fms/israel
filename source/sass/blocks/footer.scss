@@ -57,6 +57,14 @@
   &:active svg {
     fill: #ffd701;
   }
+
+  &:focus {
+    outline: none;
+
+    & svg {
+      fill: #ffd701;
+    }
+  }
 }
 
 .footer__socials-item--insta svg {

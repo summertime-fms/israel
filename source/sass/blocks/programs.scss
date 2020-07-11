@@ -3,7 +3,7 @@
   background-size: 50% auto;
 
   background-repeat: no-repeat;
-  background-position: 100% 25%;
+  background-position: 100% 30%;
   padding-top: 98px;
   padding-bottom: 20px;
 
@@ -69,8 +69,8 @@
   font-size: 15px;
   line-height: 18px;
 
-  color: #484848;
-  opacity: 0.87;
+  color: rgba(72, 72, 72, 0.87);
+
 
   min-height: 72.5px;
   min-width: 230px;
@@ -87,7 +87,7 @@
   width: 37px;
   margin-top: 8px;
   height: 45px;
-  margin-right: 14px;
+  margin-right: 16px;
 }
 
 .programs__tab-icon--common {
@@ -96,7 +96,7 @@
 
 .programs__tab--active {
   position: relative;
-  background: $yellow-gradient;
+  background: linear-gradient(138.15deg, #ffc341 20.46%, #ffd701 65.31%);
   color: #ffffff;
   font-weight: 500;
   font-size: 16px;
@@ -195,6 +195,7 @@
     padding: 0 10px;
     min-width: unset;
     width: min-content;
+    color: #c3c3c3;
 
     & svg {
       fill: #999999;
@@ -205,6 +206,7 @@
     border-radius: 60.6704px;
     height: 50px;
     padding: 0 12px;
+    color: #ffffff;
 
 
     &::before {

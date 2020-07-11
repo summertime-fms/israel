@@ -65,7 +65,7 @@ let centerElement = function(element) {
   let clientRect = element.getBoundingClientRect();
   let elementWidth = clientRect.width;
   let elementHeight = clientRect.height;
-  let elementTop = 'calc(50% - ' + elementHeight / 2 + 'px)';
+  let elementTop = 'calc(43% - ' + elementHeight / 2 + 'px)';
   let elementLeft = 'calc(50% - ' + elementWidth / 2 + 'px)';
   element.style.top = elementTop;
   element.style.left = elementLeft;
@@ -172,10 +172,11 @@ callMeForm.addEventListener('submit', function(evt) {
   centerElement(modalRecall);
 })
 
+
 let screenWidth = screen.width;
 
 if (screenWidth < 767)
-var mySwiper1 = new Swiper('.features__container', {
+var mySwiper = new Swiper('.features__container', {
   loop: true,
   direction: 'horizontal',
   height: 400,
@@ -188,16 +189,24 @@ var mySwiper1 = new Swiper('.features__container', {
 // FAQ__TOGGLING
 
 let faqList = document.querySelector('.faq__list');
+let showAnswer = function(question) {
+  let faqItem = question.parentNode;
+  let answer = faqItem.lastElementChild;
+  answer.classList.toggle('faq__answer--opened')
+}
 
 faqList.addEventListener('click', function(evt) {
   let target = evt.target;
   if (target.classList.contains('faq__button')) {
     target.classList.toggle('faq__button--opened')
-    let faqItem = target.parentNode;
-    let answer = faqItem.lastElementChild;
+    showAnswer(target);
+  } else if (target.classList.contains('faq__question')) {
+    showAnswer(target)
+    let parent = target.parentNode;
+    let button = parent.querySelector('.faq__button');
 
-    answer.classList.toggle('faq__answer--opened')
 
+    button.classList.toggle('faq__button--opened');
   }
 })
 
@@ -217,4 +226,21 @@ var mySwiper1 = new Swiper('.comments__slider', {
     el: '.comments__pagination',
     type: 'fraction',
 },
+simulateTouch: false,
+breakpoints: {
+  320: {
+    simulateTouch: true,
+  },
+}
+})
+
+// DETAILS__BUTTON POPUP
+
+let detailsForm = document.querySelector('.details__form');
+
+detailsForm.addEventListener('submit', function(evt) {
+  evt.preventDefault();
+  openPopup(modalRecall);
+  openOverlay();
+  centerElement(modalRecall);
 })

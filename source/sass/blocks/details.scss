@@ -9,8 +9,27 @@
 }
 
 .details {
-  padding-top: 107px;
+  position: relative;
+  padding-top: 32px;
   padding-bottom: 60px;
+
+  &::after {
+    content: "";
+    display: block;
+    z-index: -100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../img/contacts-watercolor@1x.png");
+    background-size: 100% auto;
+    background-position: 100% 72%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/contacts-watercolor@2x.png");
+    }
+  }
 }
 
 .details__map {
@@ -32,7 +51,7 @@
 
 .details__location {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .details__location b {
@@ -63,7 +82,7 @@
 }
 
 .details__curator-address {
-  width: 52%;
+  width: 218px;
 
   font-size: 13px;
   line-height: 1.5;
@@ -88,17 +107,27 @@
   &:active svg {
     fill: #ffd701;
   }
+
+  &:focus {
+    outline: none;
+
+    & svg {
+      fill: #ffd701;
+    }
+  }
 }
 
 .details__socials {
   @include list-reset;
   display: flex;
   padding-left: 2px;
+  align-items: flex-end;
 }
 
 .details__map-wrapper {
   position: relative;
   margin-top: -76px;
+  user-select: none;
 }
 
 .details__notion p {
@@ -129,10 +158,15 @@
 .details__contacts {
   display: flex;
   margin-bottom: 63px;
+  z-index: 5;
+  position: relative;
 }
 
 .details__title {
   margin-bottom: 33px;
+  width: fit-content;
+  z-index: 99;
+  position: relative;
 }
 
 .details__location-icon {

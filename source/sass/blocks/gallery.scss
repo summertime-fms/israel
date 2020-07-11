@@ -10,20 +10,21 @@
 
 .gallery__wrapper {
   @include desktop-container;
-  padding-top: 8.8%;
+  padding-top: 9.05%;
   position: relative;
   padding-bottom: 195px;
 }
 
 .gallery__content {
   position: relative;
-  width: 34%;
-  left: 60%;
+  width: 31%;
+  left: 58.8%;
 }
 
 .gallery__text {
   margin: 0;
   margin-bottom: 50px;
+  padding-left: 3px;
   font-size: 17px;
   line-height: 170%;
   color: #ffffff;
@@ -38,6 +39,8 @@
 }
 
 .gallery__button {
+  display: flex;
+  align-items: center;
   position: relative;
   min-width: 230px;
   width: 50%;
@@ -53,10 +56,9 @@
   &::before {
     content: "";
     display: block;
-    position: absolute;
-    left: 10%;
-    top: calc(50% - 12px);
-
+    margin-left: 41px;
+    margin-top: -4px;
+    margin-right: 8px;
     width: 22px;
     height: 22px;
     background-image: url("../img/icon-insta.svg");
@@ -87,7 +89,7 @@
 @media (max-width: $mobile-maxWidth) {
   .gallery__wrapper {
     @include mobile-container;
-
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,21 +118,22 @@
     text-align: center;
     font-size: 40px;
     line-height: 49px;
-    padding-bottom: 33%;
+    padding-bottom: 29.2%;
 
     margin-bottom: 2px;
-    margin-top: -19px;
+    margin-top: -15px;
   }
 
   .gallery__text {
+    margin-right: 13px;
     font-size: 16px;
     line-height: 1.65;
     margin-bottom: 57px;
-    padding-left: 8px;
+    padding-left: 23px;
   }
 
   .gallery__button {
-    width: 92%;
+    width: 83%;
     max-width: unset;
 
     min-width: unset;
@@ -139,10 +142,7 @@
 
     &::before {
       margin-right: 10px;
-      position: static;
-      display: inline-block;
-      vertical-align: middle;
-      left: 23%;
+      margin-left: 57px;
     }
   }
 }

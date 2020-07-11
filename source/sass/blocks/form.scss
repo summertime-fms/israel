@@ -5,7 +5,7 @@
   padding: 2px;
 
   &:not(:last-of-type) {
-    margin-bottom: 10px;
+    margin-bottom: 7px;
   }
 }
 
@@ -14,12 +14,12 @@
   border: none;
   border-radius: 80px;
   text-transform: lowercase;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 20px;
   font-variant: small-caps;
   color: rgba(72, 72, 72, 0.5);
   font-weight: 600;
-  padding-left: 40px;
+  padding-left: 38px;
   height: 56px;
 
   &:focus {
@@ -38,6 +38,19 @@
 
   &:invalid:not(:focus):not(:placeholder-shown) ~ .form__input-focused {
     background: $error-color;
+
+    &::after {
+      content: "Ошибка: неверный формат";
+      display: block;
+      font-family: $content-font;
+      position: absolute;
+      bottom: -25px;
+      left: 25px;
+      font-size: 13px;
+      line-height: 1.5;
+      opacity: 0.75;
+      color: #ff0000;
+    }
   }
 
   &:valid:not(:focus):not(:placeholder-shown) ~ .form__input-focused {
@@ -67,19 +80,23 @@
 }
 
 .form__label--checkbox {
+  width: 76%;
   display: flex;
   align-items: flex-start;
   position: relative;
+  line-height: 1.5;
+  font-size: 13px;
+  margin-left: 59px;
 
   &::before {
     content: "";
 
     display: block;
-    margin-top: 5px;
-    margin-right: 10px;
+    margin-right: 8px;
+    flex-shrink: 0;
 
-    width: 21px;
-    height: 15px;
+    width: 13px;
+    height: 13px;
     border: 2px solid transparent;
     border-image: $yellow-gradient;
     border-image-slice: 1;
@@ -90,8 +107,8 @@
   &::after {
     content: "";
     position: absolute;
-    left: 2px;
-    top: 6px;
+    left: 3px;
+    top: 2px;
 
     width: 16px;
     height: 18px;

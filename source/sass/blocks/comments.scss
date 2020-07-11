@@ -24,7 +24,34 @@
 }
 
 .comments {
-  padding-top: 127px;
+  position: relative;
+  padding-top: 26px;
+  padding-bottom: 76px;
+  background-image: url("../img/comments-watercolor@1x.png");
+  background-size: 92% auto;
+  background-position: 100% 56%;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/comments-watercolor@2x.png");
+  }
+
+  &::after {
+    content: "";
+
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 13%;
+    width: 535px;
+    height: 318px;
+    background-size: 100% auto;
+    background-image: url("/img/comments-sketch@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("/img/comments-sketch@2x.png");
+    }
+  }
 }
 
 
@@ -92,6 +119,19 @@
   font-size: 17px;
   font-language-override: 1.5;
   text-decoration: underline;
+
+  &:hover {
+    color: #63d3fd;
+  }
+
+  &:active {
+    color: #ffd701;
+  }
+
+  &:focus {
+    color: #ffd701;
+    outline: none;
+  }
 }
 
 
@@ -123,6 +163,14 @@
 
   &:active svg {
     fill: #ffd701;
+  }
+
+  &:focus {
+    outline: none;
+
+    & svg {
+      fill: #ffd701;
+    }
   }
 }
 
@@ -280,6 +328,16 @@
   .comments {
     padding-top: 73px;
     padding-bottom: 50px;
+    background: none;
+
+    &::after {
+      top: 40%;
+      // background-image: url("../img/comments-sketch_mobile@1x.png");
+
+      // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      //   background-image: url("../img/comments-sketch_mobile@2x.png");
+      // }
+    }
   }
 
   .comments__image {

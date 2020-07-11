@@ -24,7 +24,7 @@
 
   margin: 0;
   margin-bottom: 50px;
-  padding: 0 228px;
+  width: 54%;
 
   text-align: center;
 
@@ -104,7 +104,7 @@
     outline: none;
 
     &::after {
-      border-left: 19px solid #1fc0fc;
+      border-left: 15px solid #1fc0fc;
     }
 
     &::before {
@@ -115,6 +115,15 @@
 
   &:focus {
     outline: none;
+
+    &::after {
+      border-left: 15px solid #1fc0fc;
+    }
+
+    &::before {
+      background: #f4f4f4;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    }
   }
 }
 
@@ -135,12 +144,13 @@
   .about__text {
     margin-bottom: 30px;
     padding: 0;
+    width: 100%;
   }
 }
 
 @media (max-width: $mobile-maxWidth) {
   .about {
-    background-position: 50% 50%;
+    background-position: 54% 58%;
     background-size: 140% auto;
     padding-bottom: 49px;
     padding-top: 27px;
@@ -161,8 +171,8 @@
     height: 220px;
     mask-size: 150% 100%;
 
-    background-size: cover;
-    background-position: 84%;
+    background-size: 175%;
+    background-position: 69%;
     background-repeat: no-repeat;
   }
 
@@ -179,5 +189,20 @@
     height: 80px;
     top: calc(50% - 32px);
     left: calc(50% - 40px);
+
+    &::before {
+      top: calc(50% - 26px);
+      left: calc(50% - 26px);
+      width: 53px;
+      height: 53px;
+    }
+
+    &::after {
+      border-top: 8px solid transparent;
+      border-left: 13px solid rgba(31, 192, 252, 1);
+      border-bottom: 8px solid transparent;
+      top: calc(50% - 9px);
+      left: calc(50% - 3px);
+    }
   }
 }

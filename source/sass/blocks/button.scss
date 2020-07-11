@@ -26,5 +26,10 @@
     background: $active-gradient, $hover-gradient;
     outline: none;
   }
+
+  &:focus {
+    background: $active-gradient, $hover-gradient;
+    outline: none;
+  }
 }
 

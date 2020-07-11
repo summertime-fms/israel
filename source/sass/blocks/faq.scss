@@ -1,5 +1,27 @@
 .faq {
-  padding-top: 135px;
+  position: relative;
+  padding-top: 139px;
+  background-image: url("../img/faq-watercolor@1x.png");
+  background-position: 100% -79%;
+  padding-bottom: 100px;
+  background-size: 100% auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/faq-watercolor@2x.png");
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 153px;
+    height: 177px;
+    position: absolute;
+    left: 0;
+    top: 83%;
+
+
+    background-image: url("../img/case@1x.png");
+  }
 }
 
 .faq__title {
@@ -25,7 +47,7 @@
 }
 
 .faq__item {
-  width: 91%;
+  width: 91.4%;
   border-bottom: 1px solid rgba(72, 72, 72, 0.2);
   position: relative;
   display: flex;
@@ -37,7 +59,7 @@
   &::before {
     counter-increment: question;
     content: counter(question);
-    margin-right: 17px;
+    margin-right: 14px;
 
     font-weight: bold;
     font-size: 28px;
@@ -60,6 +82,7 @@
   line-height: 1.5;
   margin: 0;
   width: 65%;
+  cursor: pointer;
 }
 
 .faq__answer {
@@ -67,7 +90,9 @@
   line-height: 1.4;
   opacity: 0.74;
   display: none;
-  width: 78%;
+  width: 86%;
+  margin-bottom: 6px;
+  margin-top: 17px;
 }
 
 .faq__image {
@@ -78,9 +103,9 @@
 }
 
 .faq__button {
-  right: 90px;
+  right: 37px;
   position: absolute;
-  top: 43px;
+  top: 40px;
   width: 12px;
   height: 14px;
   border-top: 2px solid #1fc0fc;
@@ -157,7 +182,8 @@
   .faq__answer {
     width: 100%;
     font-size: 14px;
-    margin-bottom: 0;
+    margin-top: 14px;
+    margin-bottom: -4px;
     line-height: 1.6;
   }
 
@@ -195,5 +221,14 @@
   .faq__button {
     right: 0;
     top: 37px;
+  }
+
+  .faq {
+    background: none;
+    padding-bottom: 2px;
+
+    &::after {
+      top: 76%;
+    }
   }
 }
