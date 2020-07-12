@@ -132,6 +132,8 @@ userNameInput.setCustomValidity('Имя минимум из 2 символов')
     userNameInput.setCustomValidity('Имя не может превышать 25 символов')
   } else if (userNameInput.validity.valueMissing) {
     userNameInput.setCustomValidity('Обязательное поле')
+  } else if (userNameInput.validity.patternMismatch) {
+    userNameInput.setCustomValidity('Пожалуйста, используйте только буквы')
   } else {
     userNameInput.setCustomValidity('');
   };
