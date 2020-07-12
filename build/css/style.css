@@ -1241,9 +1241,10 @@ button {
 .expectations {
   position: relative;
   background-image: url("../img/expectations-watercolor@1x.jpg");
-  background-position: 0 102%;
+  background-position: 0 79%;
   background-size: cover;
   padding-bottom: 300px;
+  padding-top: 35px;
   z-index: -2; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .expectations {
@@ -1271,19 +1272,21 @@ button {
 .expectations__inner {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  margin-top: 30px; }
 
 .expectations__content {
   width: 48.9%;
   padding-right: 131px;
-  padding-top: 98px;
+  padding-top: 32px;
   margin-left: 91px; }
 
 .expectations__image {
   padding-left: 10px;
   width: 42.5%;
   margin-left: 11px;
-  margin-top: 67px;
+  margin-top: 2px;
+  margin-bottom: -40px;
   background-size: 100% auto;
   background-image: url("../img/expectations-photo_masked@1x.png");
   background-repeat: no-repeat; }
@@ -1296,7 +1299,8 @@ button {
     padding-left: 10px;
     width: 42.5%;
     margin-left: 11px;
-    margin-top: 67px;
+    margin-top: 2px;
+    margin-bottom: -40px;
     -webkit-mask-image: url("../img/mask-about@1x.png");
             mask-image: url("../img/mask-about@1x.png");
     -webkit-mask-size: 100% auto;
@@ -1357,7 +1361,7 @@ button {
     z-index: -1;
     display: block;
     height: calc(100% - 3px);
-    border-right: 1px dashed rgba(72, 72, 72, 0.5);
+    border-right: 1px dashed rgba(72, 72, 72, 0.2);
     position: absolute;
     left: 18px; }
 
@@ -1848,7 +1852,7 @@ button {
   position: relative; }
 
 .features {
-  margin-top: -145px;
+  margin-top: -107px;
   padding-bottom: 83px;
   position: relative;
   z-index: 5; }
@@ -2115,7 +2119,7 @@ button {
     .features__item--leadership h3 {
       width: 100%; }
   .features {
-    padding-top: 69px;
+    padding-top: 31px;
     padding-bottom: 78px; }
   .features__item--excursions {
     background-image: url("../img/blog-photo1_mobile@1x.jpg"); } }
@@ -2925,7 +2929,7 @@ button {
 .details__form-text b {
   font-size: 17px;
   line-height: 1.5;
-  opacity: 0.87; }
+  opacity: 0.6; }
 
 .details__form-notion {
   font-size: 13px;
@@ -2987,7 +2991,8 @@ button {
   display: flex;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: flex-start; }
+          align-items: flex-start;
+  width: 61%; }
 
 .details__form-text {
   width: 28%;
@@ -2995,10 +3000,10 @@ button {
   margin-right: 25px; }
 
 .details__form .form__input-wrapper {
-  width: 45%; }
+  width: 46%; }
 
 .details__form .form__input-wrapper:not(:last-of-type) {
-  margin-right: 30px; }
+  margin-right: 19px; }
 
 .details__form input {
   width: 100%; }
@@ -3006,7 +3011,8 @@ button {
 .details__form-group {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  width: 91%; }
 
 .details__form-wrapper {
   display: -webkit-box;
@@ -3039,7 +3045,8 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-bottom: 50px; }
+    padding-bottom: 50px;
+    width: 100%; }
   .details__form-text {
     width: 100%; }
   .details__form-wrapper {
@@ -3105,7 +3112,8 @@ button {
             flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    width: 100%; }
   .details__info-photo {
     margin-bottom: 15px; }
   .details__info {

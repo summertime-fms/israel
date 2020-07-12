@@ -141,7 +141,7 @@
 .details__form-text b {
   font-size: 17px;
   line-height: 1.5;
-  opacity: 0.87;
+  opacity: 0.6;
 }
 
 .details__form-notion {
@@ -200,6 +200,7 @@
 .details__form {
   display: flex;
   align-items: flex-start;
+  width: 61%;
 }
 
 .details__form-text {
@@ -209,11 +210,11 @@
 }
 
 .details__form .form__input-wrapper {
-  width: 45%;
+  width: 46%;
 }
 
 .details__form .form__input-wrapper:not(:last-of-type) {
-  margin-right: 30px;
+  margin-right: 19px;
 }
 
 .details__form input {
@@ -223,6 +224,7 @@
 
 .details__form-group {
   display: flex;
+  width: 91%;
 }
 
 .details__form-wrapper {
@@ -259,6 +261,7 @@
   .details__form {
     flex-direction: column;
     padding-bottom: 50px;
+    width: 100%;
   }
 
   .details__form-text {
@@ -333,6 +336,7 @@
   .details__form {
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 
   .details__info-photo {
