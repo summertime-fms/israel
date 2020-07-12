@@ -351,30 +351,34 @@
   }
 
   .comments__text {
-    padding-top: 61px;
+    padding-top: 63px;
+  }
+
+  .comments__name {
+    margin-bottom: 10px;
   }
 
   .comments__text-content {
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.65;
     width: 100%;
 
     &:not(:last-of-type) {
-      margin-bottom: 26px;
+      margin-bottom: 17px;
     }
   }
 
   .comments__more {
-    margin-top: 27px;
+    margin-top: 23px;
     margin-bottom: 17px;
   }
 
   .comments__details {
-    margin-bottom: 9px;
+    margin-bottom: 22px;
   }
 
   .comments__socials {
-    align-self: flex-start;
+    justify-content: flex-start;
     padding-left: 4px;
     margin: 0;
   }

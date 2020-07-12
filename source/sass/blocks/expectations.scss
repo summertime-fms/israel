@@ -180,10 +180,6 @@
     padding-top: 0;
     padding-bottom: 190px;
     background-image: none;
-
-    &::after {
-      display: none;
-    }
   }
 
   .expectations__wrapper {
@@ -224,10 +220,11 @@
   .expectations {
     background-image: none;
     padding-top: 48px;
+    padding-bottom: 144px;
 
     &::after {
       background-image: url("/img/stamp_mobile@1x.png");
-      top: 40.3%;
+      top: 29.3%;
       height: 202px;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
