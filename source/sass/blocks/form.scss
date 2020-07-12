@@ -77,6 +77,11 @@
   &:checked + label::after {
     display: block;
   }
+
+  &:focus + label::before {
+    border-color: #484848;
+    border-image: none;
+  }
 }
 
 .form__label--checkbox {

@@ -1,5 +1,14 @@
 .expectations {
   position: relative;
+  background-image: url("../img/expectations-watercolor@1x.jpg");
+  background-position: 0 102%;
+  background-size: cover;
+  padding-bottom: 300px;
+  z-index: -2;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/expectations-watercolor@2x.jpg");
+  }
 
   &::after {
     content: "";
@@ -9,7 +18,7 @@
     position: absolute;
     background-image: url("../img/stamp@1x.png");
     background-size: 100% auto;
-    top: 36%;
+    top: 26%;
     right: 0;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -21,14 +30,6 @@
 .expectations__wrapper {
   @include desktop-container;
   padding: 0;
-
-  background-image: url("../img/expectations-watercolor@1x.jpg");
-  background-position: 0 31%;
-  background-size: cover;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/expectations-watercolor@2x.jpg");
-  }
 }
 
 .expectations__inner {
@@ -285,5 +286,11 @@
     &:not(:last-of-type) {
       padding: 0;
     }
+  }
+}
+
+@media (min-width: 1380px) {
+  .expectations {
+    background-size: 100% 1215px;
   }
 }

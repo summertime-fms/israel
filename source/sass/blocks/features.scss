@@ -1,16 +1,19 @@
 .features__wrapper {
   @include desktop-container;
   padding-left: 104px;
+  z-index: 100;
+  position: relative;
 }
 
 .features {
-  padding-top: 156px;
+  margin-top: -145px;
   padding-bottom: 83px;
   position: relative;
+  z-index: 5;
 
   &::before {
     content: "";
-    z-index: -5;
+    z-index: 7;
     position: absolute;
     display: block;
     top: 0;
@@ -18,7 +21,7 @@
     right: 0;
     bottom: 0;
     background-size: 100% auto;
-    background-position: 100% 56%;
+    background-position: 100% -81%;
     background-repeat: no-repeat;
     background-image: url("../img/blog-watercolor@1x.png");
 
@@ -376,5 +379,11 @@
       width: 100%;
       bottom: 24px;
     }
+  }
+}
+
+@media (min-width: 1436px) {
+  .features::before {
+    background-size: 100% 1000px;
   }
 }

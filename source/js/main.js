@@ -246,3 +246,22 @@ detailsForm.addEventListener('submit', function(evt) {
   openOverlay();
   centerElement(modalRecall);
 })
+
+
+// ABORTING TAB WHILE MODAL IS OPENED
+
+let firstFormElement = form.elements[0];
+let lastFormElement = form.elements[form.elements.length - 1];
+
+lastFormElement.onkeydown = function(evt) {
+  if (evt.key == 'Tab' && !evt.shiftKey) {
+    firstFormElement.focus();
+    return false;
+  }
+}
+firstFormElement.onkeydown = function(evt) {
+  if (evt.key == 'Tab' && evt.shiftKey) {
+    lastElem.focus();
+    return false;
+  }
+};

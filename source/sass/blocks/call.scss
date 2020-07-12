@@ -71,6 +71,10 @@
   width: 100%;
 }
 
+.call__form button {
+  margin: 0;
+}
+
 @media (min-width: $tablet-width) and (max-width: $tablet-maxWidth) {
   .call__image {
     top: 20px;
@@ -149,5 +153,11 @@
   .call__form {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+@media (min-width: 1552px) {
+  .call__image {
+    background-size: 927px auto;
   }
 }

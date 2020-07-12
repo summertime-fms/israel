@@ -258,6 +258,10 @@ button {
   .intro__scroll-tip {
     margin-bottom: 115px; } }
 
+@media (min-width: 1591px) {
+  .intro {
+    background-size: 1620px, 74% auto, 100% 1034px; } }
+
 .title {
   margin: 0;
   font-size: 40px;
@@ -535,6 +539,11 @@ button {
 .form__checkbox:checked + label::after {
   display: block; }
 
+.form__checkbox:focus + label::before {
+  border-color: #484848;
+  -o-border-image: none;
+     border-image: none; }
+
 .form__label--checkbox {
   width: 76%;
   display: -webkit-box;
@@ -810,6 +819,10 @@ button {
       top: calc(50% - 9px);
       left: calc(50% - 3px); } }
 
+@media (min-width: 1806px) {
+  .about {
+    background-size: 1806px auto; } }
+
 .programs {
   background-image: url("../img/programs-sketch@1x.png");
   background-size: 50% auto;
@@ -1072,6 +1085,9 @@ button {
 .call .form__input-wrapper {
   width: 100%; }
 
+.call__form button {
+  margin: 0; }
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .call__image {
     top: 20px; }
@@ -1142,8 +1158,20 @@ button {
         -ms-flex-align: center;
             align-items: center; } }
 
+@media (min-width: 1552px) {
+  .call__image {
+    background-size: 927px auto; } }
+
 .expectations {
-  position: relative; }
+  position: relative;
+  background-image: url("../img/expectations-watercolor@1x.jpg");
+  background-position: 0 102%;
+  background-size: cover;
+  padding-bottom: 300px;
+  z-index: -2; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .expectations {
+      background-image: url("../img/expectations-watercolor@2x.jpg"); } }
   .expectations::after {
     content: "";
     display: block;
@@ -1152,7 +1180,7 @@ button {
     position: absolute;
     background-image: url("../img/stamp@1x.png");
     background-size: 100% auto;
-    top: 36%;
+    top: 26%;
     right: 0; }
     @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       .expectations::after {
@@ -1162,13 +1190,7 @@ button {
   max-width: 1366px;
   padding: 0 40px;
   margin: 0 auto;
-  padding: 0;
-  background-image: url("../img/expectations-watercolor@1x.jpg");
-  background-position: 0 31%;
-  background-size: cover; }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .expectations__wrapper {
-      background-image: url("../img/expectations-watercolor@2x.jpg"); } }
+  padding: 0; }
 
 .expectations__inner {
   display: -webkit-box;
@@ -1393,6 +1415,10 @@ button {
       margin-right: 15px; }
     .expectations__item:not(:last-of-type) {
       padding: 0; } }
+
+@media (min-width: 1380px) {
+  .expectations {
+    background-size: 100% 1215px; } }
 
 @font-face {
   font-family: "swiper-icons";
@@ -1700,15 +1726,18 @@ button {
   max-width: 1366px;
   padding: 0 40px;
   margin: 0 auto;
-  padding-left: 104px; }
+  padding-left: 104px;
+  z-index: 100;
+  position: relative; }
 
 .features {
-  padding-top: 156px;
+  margin-top: -145px;
   padding-bottom: 83px;
-  position: relative; }
+  position: relative;
+  z-index: 5; }
   .features::before {
     content: "";
-    z-index: -5;
+    z-index: 7;
     position: absolute;
     display: block;
     top: 0;
@@ -1716,7 +1745,7 @@ button {
     right: 0;
     bottom: 0;
     background-size: 100% auto;
-    background-position: 100% 56%;
+    background-position: 100% -81%;
     background-repeat: no-repeat;
     background-image: url("../img/blog-watercolor@1x.png"); }
     @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -1987,6 +2016,10 @@ button {
     .features__item--language h3 {
       width: 100%;
       bottom: 24px; } }
+
+@media (min-width: 1436px) {
+  .features::before {
+    background-size: 100% 1000px; } }
 
 .gallery {
   background-image: url("../img/gallery-background@1x.jpg");
@@ -2315,6 +2348,10 @@ button {
     padding-bottom: 2px; }
     .faq::after {
       top: 76%; } }
+
+@media (min-width: 1371px) {
+  .faq {
+    background-size: 100% 1115px; } }
 
 .comments__image {
   width: 30.5%;
@@ -3011,6 +3048,10 @@ button {
     width: 100%; }
   .details__form-button {
     width: 93%; } }
+
+@media (min-width: 1481px) {
+  .details::after {
+    background-size: 100% 890px; } }
 
 .footer {
   padding: 25px 0;

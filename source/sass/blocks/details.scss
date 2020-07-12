@@ -433,3 +433,9 @@
     width: 93%;
   }
 }
+
+@media (min-width: 1481px) {
+  .details::after {
+    background-size: 100% 890px;
+  }
+}
