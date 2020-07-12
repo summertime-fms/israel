@@ -83,7 +83,9 @@ a {
 
 button {
   border: none;
-  background: none; }
+  background: none;
+  display: block;
+  padding: 0; }
 
 .page-header {
   font-weight: 500;
@@ -368,7 +370,8 @@ button {
 
 .modal--recall p {
   text-align: center;
-  margin-bottom: 32px; }
+  margin-bottom: 32px;
+  width: 100%; }
 
 .modal--open {
   display: -webkit-box;
@@ -603,6 +606,7 @@ button {
 
 .button {
   display: block;
+  padding: 0;
   min-width: 265px;
   max-width: 365px;
   background: linear-gradient(95.15deg, #ffc341 20.46%, #ffd701 65.31%);
@@ -893,8 +897,7 @@ button {
   list-style: none; }
 
 .programs__tabs {
-  margin-right: 62px;
-  width: 230px; }
+  margin-right: 62px; }
 
 .programs__tab {
   padding-left: 20px;
@@ -2191,7 +2194,8 @@ button {
   position: relative;
   padding-top: 139px;
   background-image: url("../img/faq-watercolor@1x.png");
-  background-position: 100% -79%;
+  background-position: 0 4.4vw;
+  background-repeat: no-repeat;
   padding-bottom: 100px;
   background-size: 100% auto; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -2204,7 +2208,7 @@ button {
     height: 177px;
     position: absolute;
     left: 0;
-    top: 83%;
+    top: 868px;
     background-image: url("../img/case@1x.png");
     background-size: 100% auto; }
     @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -2292,11 +2296,11 @@ button {
       background-image: url("../img/faq-photo@2x.png"); } }
 
 .faq__button {
-  right: 37px;
+  right: 39px;
   position: absolute;
-  top: 40px;
+  top: 43px;
   width: 12px;
-  height: 14px;
+  height: 12px;
   border-top: 2px solid #1fc0fc;
   border-right: 2px solid #1fc0fc;
   -webkit-transform: rotate(135deg);
@@ -2314,7 +2318,8 @@ button {
 
 .faq__button--opened {
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg); }
+          transform: rotate(-45deg);
+  top: 50px; }
 
 .faq__answer--opened {
   display: block; }
@@ -2470,16 +2475,9 @@ button {
       -ms-flex-align: center;
           align-items: center;
   margin: 0;
-  margin-bottom: 14px; }
+  margin-bottom: 33px; }
 
 .comments__text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   padding-top: 40px;
   opacity: 0.74;
   font-size: 17px;
@@ -2496,6 +2494,7 @@ button {
 .comments__more {
   margin-bottom: 51px;
   margin-top: 16px;
+  display: block;
   color: #1fc0fc;
   font-size: 17px;
   -webkit-font-language-override: 1.5;
@@ -2517,8 +2516,9 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: end;
-      align-self: flex-end; }
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
 
 .comments__social-item:not(:last-of-type) {
   margin-right: 10px; }
@@ -2549,7 +2549,7 @@ button {
 
 .comments__pagination {
   bottom: 1px;
-  left: 35%;
+  left: 34.5%;
   width: unset;
   font-size: 17px;
   line-height: 1.5;
