@@ -167,7 +167,7 @@ modalRecallButton.addEventListener('click', function() {
 let tabsList = document.querySelector('.programs__tabs');
 let tabs = tabsList.querySelectorAll('.programs__tab');
 tabsList.addEventListener('click', function(evt) {
-
+  evt.preventDefault();
   let items = document.querySelectorAll('.programs__item');
 
   let target = evt.target.closest('li');

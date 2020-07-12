@@ -43,6 +43,10 @@
   display: block;
 }
 
+.programs__tab--active a {
+  color: #ffffff;
+}
+
 .programs__text {
   width: 85%;
 
@@ -79,6 +83,50 @@
 
   &:hover svg {
     fill: url("#paint0_linear");
+  }
+
+  &:focus {
+    position: relative;
+    outline: none;
+    color: #ffffff;
+    background: linear-gradient(138.15deg, #ffc341 20.46%, #ffd701 65.31%);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    font-variant: small-caps;
+    min-height: 72px;
+
+    text-transform: lowercase;
+
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+
+    & svg {
+      fill: #ffffff;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 0;
+      height: 0;
+      border-top: 36px solid #ffffff;
+      border-left: 30px solid transparent;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 36px solid #ffffff;
+      border-left: 30px solid transparent;
+    }
   }
 }
 
