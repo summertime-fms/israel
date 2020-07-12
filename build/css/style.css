@@ -418,6 +418,9 @@ button {
   cursor: pointer;
   background-image: url("../img/close.svg"); }
 
+.modal__inner {
+  width: 100%; }
+
 .modal__title {
   font-size: 28px;
   line-height: 34px;
@@ -477,6 +480,8 @@ button {
   font-weight: 600;
   padding-left: 38px;
   height: 56px; }
+  .form input::-ms-clear {
+    display: none; }
   .form input:focus {
     outline: none;
     border: none; }
@@ -493,7 +498,8 @@ button {
     .form input:focus::placeholder {
       color: transparent; }
   .form input:invalid:not(:focus):not(:placeholder-shown) ~ .form__input-focused {
-    background: #ff0000; }
+    background: #ff0000;
+    border-radius: 80px; }
     .form input:invalid:not(:focus):not(:placeholder-shown) ~ .form__input-focused::after {
       content: "Ошибка: неверный формат";
       display: block;
@@ -555,7 +561,7 @@ button {
   position: relative;
   line-height: 1.5;
   font-size: 13px;
-  margin-left: 59px; }
+  left: 59px; }
   .form__label--checkbox::before {
     content: "";
     display: block;
@@ -690,19 +696,12 @@ button {
   position: relative;
   width: 870px;
   height: 460px;
-  background-image: url("../img/photo_about@1x.jpg");
+  background-image: url("../img/video-photo_masked@1x.png");
   background-size: contain;
-  background-color: #d79d44;
-  -webkit-mask-image: url("../img/mask-video@1x.png");
-          mask-image: url("../img/mask-video@1x.png");
-  -webkit-mask-size: 100% auto;
-          mask-size: 100% auto;
   cursor: default; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .about__video {
-      background-image: url("../img/photo_about@2x.jpg");
-      -webkit-mask-image: url("../img/mask-video@2x.png");
-              mask-image: url("../img/mask-video@2x.png"); } }
+      background-image: url("../img/video-photo_masked@2x.png"); } }
 
 .about__play-button {
   position: absolute;
@@ -756,6 +755,25 @@ button {
       background: #f4f4f4;
       -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
               box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05); }
+
+@supports (-webkit-mask-repeat-y: unset) {
+  .about__video {
+    -webkit-mask-image: url("../img/mask-video@1x.png");
+            mask-image: url("../img/mask-video@1x.png");
+    -webkit-mask-size: 100% auto;
+            mask-size: 100% auto;
+    position: relative;
+    width: 870px;
+    height: 460px;
+    background-image: url("../img/photo_about@1x.jpg");
+    background-size: contain;
+    background-color: #d79d44;
+    cursor: default; }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .about__video {
+        background-image: url("../img/photo_about@2x.jpg");
+        -webkit-mask-image: url("../img/mask-video@2x.png");
+                mask-image: url("../img/mask-video@2x.png"); } } }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .about__video {
@@ -1209,18 +1227,32 @@ button {
   margin-left: 11px;
   margin-top: 67px;
   height: 52vw;
-  -webkit-mask-image: url("../img/mask-about@1x.png");
-          mask-image: url("../img/mask-about@1x.png");
-  -webkit-mask-size: 100% auto;
-          mask-size: 100% auto;
   background-size: 100% auto;
-  background-image: url("../img/expectations-photo@1x.jpg");
+  background-image: url("../img/expectations-photo_masked@1x.png");
   background-repeat: no-repeat; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .expectations__image {
-      -webkit-mask-image: url("../img/mask-about@2x.png");
-              mask-image: url("../img/mask-about@2x.png");
-      background-image: url("../img/expectations-photo@2x.jpg"); } }
+      background-image: url("../img/expectations-photo_masked@2x.png"); } }
+
+@supports (-webkit-mask-repeat-y: unset) {
+  .expectations__image {
+    padding-left: 10px;
+    width: 42.5%;
+    margin-left: 11px;
+    margin-top: 67px;
+    height: 52vw;
+    -webkit-mask-image: url("../img/mask-about@1x.png");
+            mask-image: url("../img/mask-about@1x.png");
+    -webkit-mask-size: 100% auto;
+            mask-size: 100% auto;
+    background-size: 100% auto;
+    background-image: url("../img/expectations-photo@1x.jpg");
+    background-repeat: no-repeat; }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .expectations__image {
+        -webkit-mask-image: url("../img/mask-about@2x.png");
+                mask-image: url("../img/mask-about@2x.png");
+        background-image: url("../img/expectations-photo@2x.jpg"); } } }
 
 .expectations__text {
   font-size: 15px;
@@ -2359,15 +2391,16 @@ button {
       flex-shrink: 0;
   margin-right: 46px; }
 
-.comments__image img {
-  -webkit-mask-image: url("../img/mask-comments@1x.png");
-          mask-image: url("../img/mask-comments@1x.png");
-  -webkit-mask-size: 102% auto;
-          mask-size: 102% auto; }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .comments__image img {
-      -webkit-mask-image: url("../img/mask-comments@2x.png");
-              mask-image: url("../img/mask-comments@2x.png"); } }
+@supports (-webkit-mask-repeat-y: unset) {
+  .comments__image img {
+    -webkit-mask-image: url("../img/mask-comments@1x.png");
+            mask-image: url("../img/mask-comments@1x.png");
+    -webkit-mask-size: 102% auto;
+            mask-size: 102% auto; }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .comments__image img {
+        -webkit-mask-image: url("../img/mask-comments@2x.png");
+                mask-image: url("../img/mask-comments@2x.png"); } } }
 
 .comments__wrapper {
   max-width: 1366px;

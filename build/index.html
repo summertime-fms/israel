@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/FiraSans-Medium.woff2" as="font">
     <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font">
@@ -60,7 +61,7 @@
             <button class="form__button button" type="submit">Перезвоните мне</button>
             <div class="form__checkbox-wrapper">
               <input class="form__checkbox visually-hidden" id="approving" type="checkbox" name="approving" value="">
-              <label class="form__label form__label--checkbox" for="approving">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
+              <label class="form__label form__label--checkbox" for="approving" onclick="this.blur();">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
             </div>
           </form>
         </div>
@@ -86,31 +87,31 @@
           <div class="programs__inner">
             <div class="programs__tabs">
               <ul class="programs__list">
-                <li class="programs__tab">
+                <li class="programs__tab programs__tab--common">
                   <svg class="programs__tab-icon programs__tab-icon--common" width="28" height="33">
                     <use xlink:href="#icon-star"></use>
                   </svg>
                   <span>Общие</span>
                 </li>
-                <li class="programs__tab programs__tab--active">
+                <li class="programs__tab programs__tab--academic programs__tab--active">
                   <svg class="programs__tab-icon programs__tab-icon--study" width="36" height="35">
                     <use xlink:href="#icon-student"></use>
                   </svg>
                   <span>Академические</span>
                 </li>
-                <li class="programs__tab">
+                <li class="programs__tab programs__tab--internship">
                   <svg class="programs__tab-icon programs__tab-icon--intentship" width="32" height="25">
                     <use xlink:href="#icon-case"></use>
                   </svg>
                   <span>Стажировки</span>
                 </li>
-                <li class="programs__tab">
+                <li class="programs__tab programs__tab--volunteur">
                   <svg class="programs__tab-icon programs__tab-icon--volunteur" width="32" height="29">
                     <use xlink:href="#icon-volunteur"></use>
                   </svg>
                   <span>Волонтерство</span>
                 </li>
-                <li class="programs__tab">
+                <li class="programs__tab programs__tab--religion">
                   <svg class="programs__tab-icon programs__tab-icon--religion" width="23" height="25">
                     <use xlink:href="#icon-religion"></use>
                   </svg>
@@ -119,7 +120,7 @@
               </ul>
             </div>
             <div class="programs__description">
-              <article class="programs__item">
+              <article class="programs__item programs__item--common">
                 <h3 class="programs__title-item title">Общие</h3>
                 <p class="programs__text">
                   Провести семестр или год за рубежом, знакомясь с различными культурами и&nbsp;идеями, традициями и стилем жизни — вот что такое учеба за границей!
@@ -130,7 +131,7 @@
                   Здесь, в Израиле, Вы сможете&nbsp;изучить все это в&nbsp;удивительной университетской среде.
                 </p>
               </article>
-              <article class="programs__item programs__item--active">
+              <article class="programs__item programs__item--active programs__item--academic">
                 <h3 class="programs__title-item title">Академические</h3>
                 <p class="programs__text">
                   Провести семестр или год за рубежом, знакомясь с различными культурами и&nbsp;идеями, традициями и стилем жизни — вот что такое учеба за границей!
@@ -141,7 +142,7 @@
                   Здесь, в Израиле, Вы сможете&nbsp;изучить все это в&nbsp;удивительной университетской среде.
                 </p>
               </article>
-              <article class="programs__item">
+              <article class="programs__item programs__item--internship">
                 <h3 class="programs__title-item title">Стажировки</h3>
                 <p class="programs__text">
                   Провести семестр или год за рубежом, знакомясь с различными культурами и&nbsp;идеями, традициями и стилем жизни — вот что такое учеба за границей!
@@ -152,7 +153,7 @@
                   Здесь, в Израиле, Вы сможете&nbsp;изучить все это в&nbsp;удивительной университетской среде.
                 </p>
               </article>
-              <article class="programs__item">
+              <article class="programs__item programs__item--volunteur">
                 <h3 class="programs__title-item title">Волонтёрство</h3>
                 <p class="programs__text">
                   Провести семестр или год за рубежом, знакомясь с различными культурами и&nbsp;идеями, традициями и стилем жизни — вот что такое учеба за границей!
@@ -163,7 +164,7 @@
                   Здесь, в Израиле, Вы сможете&nbsp;изучить все это в&nbsp;удивительной университетской среде.
                 </p>
               </article>
-              <article class="programs__item">
+              <article class="programs__item programs__item--religion">
                 <h3 class="programs__title-item title">Религиозные</h3>
                 <p class="programs__text">
                   Провести семестр или год за рубежом, знакомясь с различными культурами и&nbsp;идеями, традициями и стилем жизни — вот что такое учеба за границей!

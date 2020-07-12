@@ -22,6 +22,10 @@
   padding-left: 38px;
   height: 56px;
 
+  &::-ms-clear {
+    display: none;
+  }
+
   &:focus {
     outline: none;
     border: none;
@@ -38,6 +42,7 @@
 
   &:invalid:not(:focus):not(:placeholder-shown) ~ .form__input-focused {
     background: $error-color;
+    border-radius: 80px;
 
     &::after {
       content: "Ошибка: неверный формат";
@@ -91,7 +96,7 @@
   position: relative;
   line-height: 1.5;
   font-size: 13px;
-  margin-left: 59px;
+  left: 59px;
 
   &::before {
     content: "";

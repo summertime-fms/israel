@@ -4,12 +4,15 @@
   margin-right: 46px;
 }
 
-.comments__image img {
-  mask-image: url("../img/mask-comments@1x.png");
-  mask-size: 102% auto;
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    mask-image: url("../img/mask-comments@2x.png");
+@supports (-webkit-mask-repeat-y: unset) {
+  .comments__image img {
+    mask-image: url("../img/mask-comments@1x.png");
+    mask-size: 102% auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      mask-image: url("../img/mask-comments@2x.png");
+    }
   }
 }
 

@@ -1,3 +1,33 @@
+//POLYFILLS
+(function() {
+
+  if (!Element.prototype.matches) {
+
+    Element.prototype.matches = Element.prototype.matchesSelector ||
+      Element.prototype.webkitMatchesSelector ||
+      Element.prototype.mozMatchesSelector ||
+      Element.prototype.msMatchesSelector;
+  }
+
+})();
+
+(function() {
+
+  if (!Element.prototype.closest) {
+    Element.prototype.closest = function(css) {
+      var node = this;
+
+      while (node) {
+        if (node.matches(css)) return node;
+        else node = node.parentElement;
+      }
+      return null;
+    };
+  }
+
+})();
+
+
 // POPUP_1
 let body = document.querySelector('body');
 
@@ -132,35 +162,46 @@ modalRecallButton.addEventListener('click', function() {
 
 // TABS
 
-let tabs = document.querySelectorAll('.programs__tab');
-let items = document.querySelectorAll('.programs__item');
+let tabsList = document.querySelector('.programs__tabs');
+let tabs = tabsList.querySelectorAll('.programs__tab');
+tabsList.addEventListener('click', function(evt) {
 
-let highlightTab = function(tab) {
+  let items = document.querySelectorAll('.programs__item');
+
+  let target = evt.target.closest('li');
+  if (!target) return;
   for (let i = 0; i < tabs.length; i++) {
-    if(tabs[i].classList.contains('programs__tab--active')) {
+    if (tabs[i].classList.contains('programs__tab--active')) {
       tabs[i].classList.remove('programs__tab--active')
-    };
-  };
-  tab.classList.add('programs__tab--active')
-};
-let showItem = function(item) {
-for (let i = 0; i < items.length; i++) {
-  if(items[i].classList.contains('programs__item--active')) {
-    items[i].classList.remove('programs__item--active');
-  };
-};
-item.classList.add('programs__item--active')
+    }
+  }
+  for (let i = 0; i < items.length; i++) {
+    if (items[i].classList.contains('programs__item--active')) {
+      items[i].classList.remove('programs__item--active')
+    }
 
-};
+  }
+  target.classList.add('programs__tab--active');
 
-for (let i = 0; i < tabs.length; i++) {
-  tabs[i].addEventListener('click', function() {
-    showItem(items[i]);
-    highlightTab(tabs[i]);
-  });
-};
+  if(target.classList.contains('programs__tab--common')) {
+    items[0].classList.add('programs__item--active');
+  }
+  if(target.classList.contains('programs__tab--academic')) {
+    items[1].classList.add('programs__item--active');
+  }
+  if(target.classList.contains('programs__tab--internship')) {
+    items[2].classList.add('programs__item--active');
+  }
+  if(target.classList.contains('programs__tab--volunteur')) {
+    items[3].classList.add('programs__item--active');
+  }
+  if(target.classList.contains('programs__tab--religion')) {
+    items[4].classList.add('programs__item--active');
+  }
+})
 
-let tabsBar = document.querySelector('.programs__tab-bar');
+
+
 
 
 //CALL BUTTON POPUP

@@ -14,6 +14,7 @@
   }
 }
 
+
 .about__wrapper {
   @include desktop-container;
   display: flex;
@@ -42,16 +43,15 @@
 
   width: 870px;
   height: 460px;
-  background-image: url("../img/photo_about@1x.jpg");
+  background-image: url("../img/video-photo_masked@1x.png");
   background-size: contain;
-  background-color: #d79d44;
-  mask-image: url("../img/mask-video@1x.png");
-  mask-size: 100% auto;
+
+
+
   cursor: default;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/photo_about@2x.jpg");
-    mask-image: url("../img/mask-video@2x.png");
+    background-image: url("../img/video-photo_masked@2x.png");
   }
 }
 
@@ -130,6 +130,29 @@
     &::before {
       background: #f4f4f4;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+
+@supports (-webkit-mask-repeat-y: unset) {
+  .about__video {
+    mask-image: url("../img/mask-video@1x.png");
+    mask-size: 100% auto;
+    position: relative;
+
+    width: 870px;
+    height: 460px;
+    background-image: url("../img/photo_about@1x.jpg");
+    background-size: contain;
+    background-color: #d79d44;
+
+
+    cursor: default;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/photo_about@2x.jpg");
+      mask-image: url("../img/mask-video@2x.png");
     }
   }
 }
