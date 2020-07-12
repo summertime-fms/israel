@@ -178,6 +178,12 @@
 
   .expectations {
     padding-top: 0;
+    padding-bottom: 190px;
+    background-image: none;
+
+    &::after {
+      display: none;
+    }
   }
 
   .expectations__wrapper {

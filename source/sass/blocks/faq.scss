@@ -153,6 +153,10 @@
 @media (min-width: $tablet-width) and (max-width: 1365px) {
   .faq {
     padding-top: 95px;
+
+    &::after {
+      display: none;
+    }
   }
 
   .faq__title {

@@ -47,7 +47,6 @@
   background-size: contain;
 
 
-
   cursor: default;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -161,6 +160,12 @@
   .about__video {
     width: 600px;
     background-size: cover;
+  }
+
+  @supports (-webkit-mask-repeat-y: unset) {
+    .about__video {
+      mask-size: 100% 100%;
+    }
   }
 
   .about__wrapper {

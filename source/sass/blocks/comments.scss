@@ -179,7 +179,7 @@
 .comments__pagination {
   bottom: 1px;
   left: 34.5%;
-  width: unset;
+  width: 45px;
 
   font-size: 17px;
   line-height: 1.5;
@@ -261,12 +261,12 @@
   }
 
   .comments__button {
-    left: 43.7%;
-    bottom: 18.7%;
+    left: 46.7%;
+    bottom: 11%;
   }
 
   .comments__button--next {
-    left: 45.7%;
+    left: 49.7%;
   }
 
   .comments__more {
@@ -283,8 +283,12 @@
   }
 
   .comments__pagination {
-    bottom: 75px;
+    bottom: 35px;
     left: 37%;
+  }
+
+  .comments {
+    padding-bottom: 26px;
   }
 }
 

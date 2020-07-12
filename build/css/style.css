@@ -65,6 +65,13 @@ html {
           box-sizing: inherit; }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
   margin: 0;
   padding: 0;
@@ -783,6 +790,10 @@ button {
   .about__video {
     width: 600px;
     background-size: cover; }
+  @supports (-webkit-mask-repeat-y: unset) {
+    .about__video {
+      -webkit-mask-size: 100% 100%;
+              mask-size: 100% 100%; } }
   .about__wrapper {
     min-width: 768px;
     max-width: 1023px;
@@ -1354,7 +1365,11 @@ button {
   .expectations__image {
     display: none; }
   .expectations {
-    padding-top: 0; }
+    padding-top: 0;
+    padding-bottom: 190px;
+    background-image: none; }
+    .expectations::after {
+      display: none; }
   .expectations__wrapper {
     min-width: 768px;
     max-width: 1023px;
@@ -1965,6 +1980,8 @@ button {
 @media (min-width: 768px) and (max-width: 1023px) {
   .features {
     padding-top: 60px; }
+    .features::before {
+      display: none; }
   .features__text {
     width: 100%;
     text-align: center; } }
@@ -2327,6 +2344,8 @@ button {
 @media (min-width: 768px) and (max-width: 1365px) {
   .faq {
     padding-top: 95px; }
+    .faq::after {
+      display: none; }
   .faq__title {
     margin-bottom: 1.2%; }
   .faq__item {
@@ -2550,7 +2569,7 @@ button {
 .comments__pagination {
   bottom: 1px;
   left: 34.5%;
-  width: unset;
+  width: 45px;
   font-size: 17px;
   line-height: 1.5;
   color: #484848;
@@ -2605,10 +2624,10 @@ button {
   .comments__details {
     margin: 0; }
   .comments__button {
-    left: 43.7%;
-    bottom: 18.7%; }
+    left: 46.7%;
+    bottom: 11%; }
   .comments__button--next {
-    left: 45.7%; }
+    left: 49.7%; }
   .comments__more {
     margin-bottom: 0; }
   .comments__socials {
@@ -2617,8 +2636,10 @@ button {
   .comments__slider {
     padding-bottom: 40px; }
   .comments__pagination {
-    bottom: 75px;
-    left: 37%; } }
+    bottom: 35px;
+    left: 37%; }
+  .comments {
+    padding-bottom: 26px; } }
 
 @media (max-width: 767px) {
   .comments__wrapper {
@@ -3088,7 +3109,8 @@ button {
 
 .footer {
   padding: 25px 0;
-  border-top: 1px solid rgba(72, 72, 72, 0.2); }
+  border-top: 1px solid rgba(72, 72, 72, 0.2);
+  justify-self: flex-end; }
 
 .footer__wrapper {
   max-width: 1366px;
