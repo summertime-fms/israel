@@ -48,7 +48,7 @@
   width: 42.5%;
   margin-left: 11px;
   margin-top: 67px;
-  height: 52vw;
+  // height: 52vw;
 
   background-size: 100% auto;
   background-image: url("../img/expectations-photo_masked@1x.png");
@@ -66,7 +66,7 @@
     width: 42.5%;
     margin-left: 11px;
     margin-top: 67px;
-    height: 52vw;
+    // height: 52vw;
     mask-image: url("../img/mask-about@1x.png");
     mask-size: 100% auto;
     background-size: 100% auto;
@@ -313,6 +313,6 @@
 
 @media (min-width: 1380px) {
   .expectations {
-    background-size: 100% 1215px;
+    background-size: 100% 100%;
   }
 }

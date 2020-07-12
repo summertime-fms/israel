@@ -78,7 +78,7 @@
   line-height: 1.5;
 }
 
-.form__checkbox {
+.form__checkbox-wrapper input {
   &:checked + label::after {
     display: block;
   }
@@ -89,7 +89,7 @@
   }
 }
 
-.form__label--checkbox {
+.form__checkbox-wrapper label {
   width: 76%;
   display: flex;
   align-items: flex-start;
@@ -130,7 +130,7 @@
   }
 }
 
-.form__input-focused {
+.form__input-wrapper span {
   content: "";
   background: #e3e3e3;
   height: 60px;

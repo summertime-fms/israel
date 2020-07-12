@@ -270,7 +270,7 @@ button {
 
 @media (min-width: 1591px) {
   .intro {
-    background-size: 1620px, 74% auto, 100% 1034px; } }
+    background-size: 100% 100%, 74% auto, 100% 100%; } }
 
 .title {
   margin: 0;
@@ -554,15 +554,15 @@ button {
   opacity: 0.74;
   line-height: 1.5; }
 
-.form__checkbox:checked + label::after {
+.form__checkbox-wrapper input:checked + label::after {
   display: block; }
 
-.form__checkbox:focus + label::before {
+.form__checkbox-wrapper input:focus + label::before {
   border-color: #484848;
   -o-border-image: none;
      border-image: none; }
 
-.form__label--checkbox {
+.form__checkbox-wrapper label {
   width: 76%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -574,7 +574,7 @@ button {
   line-height: 1.5;
   font-size: 13px;
   left: 59px; }
-  .form__label--checkbox::before {
+  .form__checkbox-wrapper label::before {
     content: "";
     display: block;
     margin-right: 8px;
@@ -588,7 +588,7 @@ button {
     border-image-slice: 1;
     border-radius: 2px;
     cursor: pointer; }
-  .form__label--checkbox::after {
+  .form__checkbox-wrapper label::after {
     content: "";
     position: absolute;
     left: 3px;
@@ -600,7 +600,7 @@ button {
     cursor: pointer;
     display: none; }
 
-.form__input-focused {
+.form__input-wrapper span {
   content: "";
   background: #e3e3e3;
   height: 60px;
@@ -623,7 +623,6 @@ button {
   border-radius: 80px;
   text-transform: lowercase;
   text-align: center;
-  padding: 0;
   padding-top: 20px;
   padding-bottom: 20px;
   font-weight: 600;
@@ -1285,7 +1284,6 @@ button {
   width: 42.5%;
   margin-left: 11px;
   margin-top: 67px;
-  height: 52vw;
   background-size: 100% auto;
   background-image: url("../img/expectations-photo_masked@1x.png");
   background-repeat: no-repeat; }
@@ -1299,7 +1297,6 @@ button {
     width: 42.5%;
     margin-left: 11px;
     margin-top: 67px;
-    height: 52vw;
     -webkit-mask-image: url("../img/mask-about@1x.png");
             mask-image: url("../img/mask-about@1x.png");
     -webkit-mask-size: 100% auto;
@@ -1513,7 +1510,7 @@ button {
 
 @media (min-width: 1380px) {
   .expectations {
-    background-size: 100% 1215px; } }
+    background-size: 100% 100%; } }
 
 @font-face {
   font-family: "swiper-icons";
