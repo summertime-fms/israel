@@ -2181,6 +2181,7 @@ button {
   margin-bottom: 25px; }
 
 .gallery__button {
+  margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2189,7 +2190,9 @@ button {
           align-items: center;
   position: relative;
   min-width: 230px;
-  width: 50%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-weight: 500;
   font-size: 17px;
   line-height: 20px;
