@@ -4,6 +4,10 @@
   padding-left: 110px;
 }
 
+.details__map-inner {
+  position: relative;
+}
+
 .details__info-photo {
   margin-right: 25px;
 }
@@ -258,6 +262,13 @@
     width: 100%;
   }
 
+  .details__map-inner {
+    display: flex;
+    justify-content: center;
+    max-width: 678px;
+    margin: 0 auto;
+  }
+
   .details__form {
     flex-direction: column;
     padding-bottom: 50px;
@@ -394,8 +405,13 @@
     margin: 0;
     width: 100%;
     height: 425px;
-    position: relative;
+
     overflow: hidden;
+  }
+
+  .details__map-inner {
+    position: relative;
+    height: 100%;
   }
 
   .details__map {

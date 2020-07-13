@@ -84,15 +84,14 @@ img {
   width: 100%;
   height: auto; }
 
+button {
+  background: none;
+  border: none;
+  padding: 0; }
+
 a {
   text-decoration: none;
   color: #484848; }
-
-button {
-  border: none;
-  background: none;
-  display: block;
-  padding: 0; }
 
 .page-header {
   font-weight: 500;
@@ -483,6 +482,7 @@ button {
 
 .form input {
   position: relative;
+  padding-right: 20px;
   border: none;
   border-radius: 80px;
   text-transform: lowercase;
@@ -616,13 +616,14 @@ button {
   right: 0; }
 
 .button {
-  display: block;
+  border: none;
+  font-family: "FiraSans", "Helvetica", sans-serif;
   padding: 0;
+  display: block;
   min-width: 265px;
   max-width: 365px;
   background: -o-linear-gradient(354.85deg, #ffc341 20.46%, #ffd701 65.31%);
   background: linear-gradient(95.15deg, #ffc341 20.46%, #ffd701 65.31%);
-  font-family: "FiraSans", "Helvetica", sans-serif;
   border-radius: 80px;
   text-transform: lowercase;
   text-align: center;
@@ -904,8 +905,14 @@ button {
 .programs__item--active {
   display: block; }
 
-.programs__tab--active a {
-  color: #ffffff; }
+.programs__tab--active button {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12); }
 
 .programs__text {
   width: 85%;
@@ -920,6 +927,17 @@ button {
 
 .programs__tabs {
   margin-right: 62px; }
+
+.programs__tab button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer; }
+  .programs__tab button:focus {
+    outline: none; }
 
 .programs__tab {
   padding-left: 20px;
@@ -2820,6 +2838,9 @@ button {
   padding: 0;
   padding-left: 110px; }
 
+.details__map-inner {
+  position: relative; }
+
 .details__info-photo {
   margin-right: 25px; }
 
@@ -3049,6 +3070,15 @@ button {
     margin-bottom: 70px; }
   .details__map {
     width: 100%; }
+  .details__map-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 678px;
+    margin: 0 auto; }
   .details__form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3165,8 +3195,10 @@ button {
     margin: 0;
     width: 100%;
     height: 425px;
-    position: relative;
     overflow: hidden; }
+  .details__map-inner {
+    position: relative;
+    height: 100%; }
   .details__map {
     width: 100%;
     height: 100%;

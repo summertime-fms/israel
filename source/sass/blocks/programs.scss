@@ -43,8 +43,19 @@
   display: block;
 }
 
-.programs__tab--active a {
-  color: #ffffff;
+.programs__tab--active {
+  & button {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    font-variant: small-caps;
+
+
+    text-transform: lowercase;
+
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  }
 }
 
 .programs__text {
@@ -64,8 +75,19 @@
   margin-right: 62px;
 }
 
+.programs__tab button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
 .programs__tab {
   padding-left: 20px;
+
   cursor: pointer;
   font-weight: 400;
 
