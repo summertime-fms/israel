@@ -7,6 +7,10 @@
   &:not(:last-of-type) {
     margin-bottom: 7px;
   }
+
+  & p {
+    display: none;
+  }
 }
 
 .form input {
@@ -41,12 +45,14 @@
     }
   }
 
-  &:invalid:not(:focus):not(:placeholder-shown) ~ .form__input-focused {
-    background: $error-color;
-    border-radius: 80px;
+  &:invalid:not(:focus):not(:placeholder-shown) {
+    & ~ .form__input-focused {
+      background: $error-color;
+      border-radius: 80px;
+    }
 
-    &::after {
-      content: "Ошибка: неверный формат";
+    & ~ p {
+      margin: 0;
       display: block;
       font-family: $content-font;
       position: absolute;
@@ -57,10 +63,11 @@
       opacity: 0.75;
       color: #ff0000;
     }
-  }
 
-  &:valid:not(:focus):not(:placeholder-shown) ~ .form__input-focused {
-    background: #484848;
+
+    &:valid:not(:focus):not(:placeholder-shown) ~ .form__input-focused {
+      background: #484848;
+    }
   }
 }
 

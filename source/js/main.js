@@ -254,7 +254,7 @@ let showAnswer = function(item) {
 
   let button = item.querySelector('.faq__button');
 
- let answer = item.lastElementChild;
+  let answer = item.lastElementChild;
   button.classList.toggle('faq__button--opened')
 
 answer.classList.toggle('faq__answer--opened');

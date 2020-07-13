@@ -43,21 +43,6 @@
   display: block;
 }
 
-.programs__tab--active {
-  & button {
-    color: #ffffff;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    font-variant: small-caps;
-
-
-    text-transform: lowercase;
-
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
-  }
-}
-
 .programs__text {
   width: 85%;
 
@@ -76,6 +61,7 @@
 }
 
 .programs__tab button {
+  padding-left: 20px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -86,12 +72,12 @@
 }
 
 .programs__tab {
-  padding-left: 20px;
 
   cursor: pointer;
   font-weight: 400;
 
   font-size: 15px;
+  font-family: $content-font;
   line-height: 18px;
 
   color: rgba(72, 72, 72, 0.87);
@@ -103,8 +89,64 @@
   justify-content: flex-start;
   align-items: center;
 
+  &:focus {
+    outline: none;
+  }
+
   &:hover svg {
     fill: url("#paint0_linear");
+  }
+
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 36px solid #ffffff;
+    border-left: 30px solid transparent;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 36px solid #ffffff;
+    border-left: 30px solid transparent;
+  }
+}
+
+.programs__tab-icon {
+  width: 37px;
+  margin-top: 8px;
+  height: 45px;
+  margin-right: 16px;
+}
+
+.programs__tab--active {
+  position: relative;
+  background: linear-gradient(138.15deg, #ffc341 20.46%, #ffd701 65.31%);
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  font-variant: small-caps;
+  min-height: 72px;
+
+  text-transform: lowercase;
+
+
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+
+  & button {
+    color: inherit;
   }
 
   &:focus {
@@ -125,59 +167,9 @@
     & svg {
       fill: #ffffff;
     }
-
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 0;
-      height: 0;
-      border-top: 36px solid #ffffff;
-      border-left: 30px solid transparent;
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 0;
-      height: 0;
-      border-bottom: 36px solid #ffffff;
-      border-left: 30px solid transparent;
-    }
   }
-}
 
-.programs__tab-icon {
-  width: 37px;
-  margin-top: 8px;
-  height: 45px;
-  margin-right: 16px;
-}
-
-.programs__tab-icon--common {
-  background-position: 30px 30px;
-}
-
-.programs__tab--active {
-  position: relative;
-  background: linear-gradient(138.15deg, #ffc341 20.46%, #ffd701 65.31%);
-  color: #ffffff;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
-  font-variant: small-caps;
-  min-height: 72px;
-
-  text-transform: lowercase;
-
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
-
-  &:hover svg {
+  & svg {
     fill: #ffffff;
   }
 
@@ -204,10 +196,11 @@
     border-bottom: 36px solid #ffffff;
     border-left: 30px solid transparent;
   }
+}
 
-  & svg {
-    fill: #ffffff;
-  }
+
+.programs__tab--active:hover svg {
+  fill: #ffffff;
 }
 
 @media (min-width: $tablet-width) and (max-width: $tablet-maxWidth) {
