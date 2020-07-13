@@ -2538,10 +2538,10 @@ button {
     width: 535px;
     height: 318px;
     background-size: 100% auto;
-    background-image: url("/img/comments-sketch@1x.png"); }
+    background-image: url("../img/comments-sketch@1x.png"); }
     @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       .comments::after {
-        background-image: url("/img/comments-sketch@2x.png"); } }
+        background-image: url("../img/comments-sketch@2x.png"); } }
 
 .comments__slide {
   display: -webkit-box;

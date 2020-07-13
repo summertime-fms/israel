@@ -49,10 +49,10 @@
     width: 535px;
     height: 318px;
     background-size: 100% auto;
-    background-image: url("/img/comments-sketch@1x.png");
+    background-image: url("../img/comments-sketch@1x.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("/img/comments-sketch@2x.png");
+      background-image: url("../img/comments-sketch@2x.png");
     }
   }
 }
