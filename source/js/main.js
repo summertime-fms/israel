@@ -1,3 +1,5 @@
+
+
 //POLYFILLS
 (function() {
 
@@ -246,27 +248,24 @@ var mySwiper = new Swiper('.features__container', {
 
 // FAQ__TOGGLING
 
-let faqList = document.querySelector('.faq__list');
-let showAnswer = function(question) {
+let questions = document.querySelectorAll('.faq__item');
 
-  let answer = question.lastElementChild;
-  answer.classList.toggle('faq__answer--opened');
-};
+let showAnswer = function(item) {
 
-faqList.addEventListener('click', function(evt) {
-  let target = evt.target;
-  if (target.classList.contains('faq__button')) {
-    target.classList.toggle('faq__button--opened');
-    showAnswer(target);
-  } else if (target.classList.contains('faq__item')) {
-    showAnswer(target);
-    let parent = target.parentNode;
-    let button = parent.querySelector('.faq__button');
+  let button = item.querySelector('.faq__button');
+
+ let answer = item.lastElementChild;
+  button.classList.toggle('faq__button--opened')
+
+answer.classList.toggle('faq__answer--opened');
+}
 
 
-    button.classList.toggle('faq__button--opened');
-  };
-});
+for (let i = 0; i < questions.length; i++) {
+  questions[i].addEventListener('click', function() {
+    showAnswer(questions[i]);
+  })
+}
 
 // COMMENTS__SLIDER
 

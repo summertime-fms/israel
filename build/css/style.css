@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  src: local("Montserrat"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap; }
@@ -22,7 +22,7 @@
 
 @font-face {
   font-family: "FiraSans";
-  src: url("..//fonts/FiraSans-Medium.woff2") format("woff2"), url("..//fonts/FiraSans-Medium.woff") format("woff");
+  src: local("Fira Sans"), url("..//fonts/FiraSans-Medium.woff2") format("woff2"), url("..//fonts/FiraSans-Medium.woff") format("woff");
   font-weight: 500;
   font-display: swap;
   font-style: normal; }
@@ -76,7 +76,7 @@ body {
   margin: 0;
   padding: 0;
   font-style: normal;
-  font-family: "FiraSans", "Arial", sans-serif; }
+  font-family: "FiraSans", "Helvetica", sans-serif; }
 
 img {
   display: inline-block;
@@ -280,7 +280,7 @@ button {
   line-height: 49px;
   letter-spacing: -0.02em;
   color: #1fc0fc;
-  font-family: "Montserrat", "Arial", sans-serif;
+  font-family: "Montserrat", "Helvetica", sans-serif;
   text-transform: uppercase;
   font-weight: 700; }
 
@@ -344,7 +344,7 @@ button {
 .modal {
   display: none;
   position: relative;
-  font-family: "FiraSans", "Arial", sans-serif;
+  font-family: "FiraSans", "Helvetica", sans-serif;
   width: 480px;
   font-size: 15px;
   line-height: 1.7;
@@ -517,7 +517,7 @@ button {
     .form input:invalid:not(:focus):not(:placeholder-shown) ~ .form__input-focused::after {
       content: "Ошибка: неверный формат";
       display: block;
-      font-family: "FiraSans", "Arial", sans-serif;
+      font-family: "FiraSans", "Helvetica", sans-serif;
       position: absolute;
       bottom: -25px;
       left: 25px;
@@ -622,6 +622,7 @@ button {
   max-width: 365px;
   background: -o-linear-gradient(354.85deg, #ffc341 20.46%, #ffd701 65.31%);
   background: linear-gradient(95.15deg, #ffc341 20.46%, #ffd701 65.31%);
+  font-family: "FiraSans", "Helvetica", sans-serif;
   border-radius: 80px;
   text-transform: lowercase;
   text-align: center;
@@ -927,7 +928,7 @@ button {
   font-size: 15px;
   line-height: 18px;
   color: rgba(72, 72, 72, 0.87);
-  min-height: 72.5px;
+  min-height: 72px;
   min-width: 230px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1158,7 +1159,8 @@ button {
   position: absolute;
   right: 0;
   padding: 20px 0;
-  min-width: 215px; }
+  min-width: 215px;
+  font-family: "FiraSans", "Helvetica", sans-serif; }
 
 .call .form__input-wrapper {
   width: 100%; }
@@ -2204,8 +2206,8 @@ button {
 
 .gallery__button-icon {
   fill: #ffffff;
-  margin-left: 30px;
-  margin-right: 20px; }
+  margin-left: 41px;
+  margin-right: 10px; }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .gallery {
@@ -2366,6 +2368,7 @@ button {
 
 .faq__question {
   font-weight: normal;
+  text-align: left;
   font-size: 17px;
   line-height: 1.5;
   margin: 0;

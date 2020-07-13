@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+  src: local("Montserrat"),
+    url("../fonts/Montserrat-Bold.woff2") format("woff2"),
     url("../fonts/Montserrat-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
@@ -27,7 +28,8 @@
 
 @font-face {
   font-family: "FiraSans";
-  src: url("..//fonts/FiraSans-Medium.woff2")
+  src: local("Fira Sans"),
+    url("..//fonts/FiraSans-Medium.woff2")
     format("woff2"),
     url("..//fonts/FiraSans-Medium.woff")
     format("woff");
