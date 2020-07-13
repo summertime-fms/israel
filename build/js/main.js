@@ -213,7 +213,7 @@ let bodyHeight = bodyClientRect.height;
     $('html, body').animate({
       scrollTop: bodyHeight,
     }, {
-      duration: 370,
+      duration: 770,
       easing: 'swing'
     });
 })
