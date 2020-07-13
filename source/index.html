@@ -31,9 +31,7 @@
       <section class="intro">
         <h1 class="visually-hidden">Израиль</h1>
         <p class="intro__text">Учёба, путешествие и карьера<br> для еврейской молодёжи </p>
-        <div class="intro__scroll-tip">
-          <div class="intro__scroll-icon"></div>
-        </div>
+        <button class="intro__scroll-tip" type="button" aria-label="Прокрутить вниз" title="Прокрутить вниз" onclick="this.blur();"></button>
       </section>
       <section class="modal modal--call">
         <button class="modal__close" type="button" aria-label="Закрыть"></button>
@@ -43,7 +41,7 @@
           <form class="modal__form form" action="#" method="POST" autocomplete="off">
             <div class="modal__form-fields form__fields-group">
               <div class="form__input-wrapper">
-                <input class="form__input form__input--name" type="text" name="username" value="" minlength="2" maxlength="25" placeholder="Имя" pattern=[^0-9] required>
+                <input class="form__input form__input--name" type="text" name="username" value="" minlength="2" maxlength="25" placeholder="Имя" required>
                 <span class="form__input-focused"></span>
               </div>
               <div class="form__input-wrapper">
@@ -104,7 +102,7 @@
                   </svg>
                   <span>Волонтерство</span>
                 </li>
-                <li class="programs__tab programs__tab--religion" tabindex="0"v>
+                <li class="programs__tab programs__tab--religion" tabindex="0">
                   <svg class="programs__tab-icon programs__tab-icon--religion" width="23" height="25">
                     <use xlink:href="#icon-religion"></use>
                   </svg>

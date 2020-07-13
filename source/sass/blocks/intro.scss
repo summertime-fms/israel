@@ -37,31 +37,33 @@
   margin-bottom: 160px;
   border: 1px dashed #ffffff;
   border-radius: 50%;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 54px;
+    height: 54px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    background-image: url("../img/mouse@1x.png");
+    background-size: 17px 26px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/mouse@2x.png");
+    }
+  }
 
   &::after {
     content: "";
-
     display: block;
-    position: absolute;
     width: 1px;
-    top: 100%;
     height: 55px;
     background-color: #ffffff;
-  }
-}
-
-.intro__scroll-icon {
-  width: 54px;
-  height: 54px;
-  border: 1px solid #ffffff;
-  border-radius: 50%;
-  background-image: url("../img/mouse@1x.png");
-  background-size: 17px 26px;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/mouse@2x.png");
+    position: absolute;
+    left: 50%;
+    bottom: -55px;
   }
 }
 

@@ -202,8 +202,21 @@ tabsList.addEventListener('click', function(evt) {
   }
 })
 
+//AUTOSCROLL
 
+let scrollButton = document.querySelector('.intro__scroll-tip');
 
+let bodyClientRect = body.getBoundingClientRect();
+let bodyHeight = bodyClientRect.height;
+
+  scrollButton.addEventListener('click', function() {
+    $('html, body').animate({
+      scrollTop: bodyHeight,
+    }, {
+      duration: 370,
+      easing: 'swing'
+    });
+})
 
 
 //CALL BUTTON POPUP
@@ -235,8 +248,8 @@ var mySwiper = new Swiper('.features__container', {
 
 let faqList = document.querySelector('.faq__list');
 let showAnswer = function(question) {
-  let faqItem = question.parentNode;
-  let answer = faqItem.lastElementChild;
+
+  let answer = question.lastElementChild;
   answer.classList.toggle('faq__answer--opened');
 };
 
@@ -245,7 +258,7 @@ faqList.addEventListener('click', function(evt) {
   if (target.classList.contains('faq__button')) {
     target.classList.toggle('faq__button--opened');
     showAnswer(target);
-  } else if (target.classList.contains('faq__question')) {
+  } else if (target.classList.contains('faq__item')) {
     showAnswer(target);
     let parent = target.parentNode;
     let button = parent.querySelector('.faq__button');
