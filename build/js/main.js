@@ -103,6 +103,10 @@ let centerElement = function(element) {
   element.style.left = elementLeft;
 }
 
+window.addEventListener('resize', function() {
+  centerElement(modalCall)
+})
+
 orderCallLink.addEventListener('click', function() {
   openPopup(modalCall);
   centerElement(modalCall);
