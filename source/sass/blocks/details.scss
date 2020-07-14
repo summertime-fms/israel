@@ -376,8 +376,8 @@
 
   .details__location-icon--map {
     width: 55px;
-    top: 51%;
-    left: 82.2%;
+    top: 50%;
+    left: 80.2%;
     height: 70px;
   }
 
@@ -402,8 +402,9 @@
   }
 
   .details__map-wrapper {
-    margin: 0;
-    width: 100%;
+    margin: 0 auto;
+    width: 320px;
+
     height: 425px;
 
     overflow: hidden;
