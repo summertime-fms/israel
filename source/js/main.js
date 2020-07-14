@@ -248,16 +248,14 @@ var mySwiper = new Swiper('.features__container', {
 
 // FAQ__TOGGLING
 
-let questions = document.querySelectorAll('.faq__item');
+let questions = document.querySelectorAll('.faq__question');
 
 let showAnswer = function(item) {
 
-  let button = item.querySelector('.faq__button');
-
-  let answer = item.lastElementChild;
-  button.classList.toggle('faq__button--opened')
-
+  let parent = item.parentNode;
+  let answer = parent.lastElementChild;
 answer.classList.toggle('faq__answer--opened');
+item.classList.toggle('faq__question--active');
 }
 
 
