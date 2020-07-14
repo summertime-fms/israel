@@ -2806,7 +2806,8 @@ a {
     .faq__item::before {
       margin-right: 13px; }
     .faq__item::after {
-      top: 39px; }
+      top: 39px;
+      right: 1px; }
   .faq__question {
     font-size: 16px;
     line-height: 1.7;
