@@ -783,7 +783,9 @@ a {
     font-size: 14px;
     line-height: 1.6; }
   .modal__form {
-    padding-bottom: 170px; } }
+    padding-bottom: 170px; }
+  .modal--call {
+    padding-top: 200px; } }
 
 .form__input-wrapper {
   position: relative;
