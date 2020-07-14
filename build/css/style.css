@@ -696,6 +696,10 @@ a {
   -webkit-animation: appear 0.3s ease-in;
           animation: appear 0.3s ease-in; }
 
+.modal--call .form__input-wrapper:not(:last-of-type) {
+  margin: 0;
+  margin-bottom: 7px; }
+
 .modal__form {
   display: -webkit-box;
   display: -ms-flexbox;
