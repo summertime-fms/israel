@@ -252,12 +252,9 @@ let questions = document.querySelectorAll('.faq__item');
 
 let showAnswer = function(item) {
 
-  let button = item.querySelector('.faq__button');
-
   let answer = item.lastElementChild;
-  button.classList.toggle('faq__button--opened')
-
 answer.classList.toggle('faq__answer--opened');
+item.classList.toggle('faq__item--active');
 }
 
 

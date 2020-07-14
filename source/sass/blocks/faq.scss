@@ -64,6 +64,22 @@
   padding-top: 24px;
   cursor: pointer;
 
+  &:active {
+    outline: none;
+
+    &::after {
+      border-top: 2px solid #ffd701;
+      border-right: 2px solid #ffd701;
+    }
+  }
+
+  &:focus {
+    &::after {
+      border-top: 2px solid #ffd701;
+      border-right: 2px solid #ffd701;
+    }
+  }
+
   &::before {
     counter-increment: question;
     content: counter(question);
@@ -74,7 +90,27 @@
     line-height: 1.7;
     color: #ffc341;
   }
+
+  &::after {
+    content: "";
+    display: block;
+    right: 38px;
+    position: absolute;
+    top: 43px;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #1fc0fc;
+    border-right: 2px solid #1fc0fc;
+    transform: rotate(135deg);
+    cursor: pointer;
+
+    &:hover {
+      border-top: 2px solid #63d3fd;
+      border-right: 2px solid #63d3fd;
+    }
+  }
 }
+
 
 @supports (-webkit-text-fill-color: transparent) {
   .faq__item::before {
@@ -92,6 +128,11 @@
   margin: 0;
   width: 65%;
   cursor: pointer;
+}
+
+.faq__item--active::after {
+  transform: rotate(-45deg);
+  top: 50px;
 }
 
 .faq__answer {
@@ -114,38 +155,6 @@
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/faq-photo@2x.png");
   }
-}
-
-.faq__button {
-  right: 39px;
-  position: absolute;
-  top: 43px;
-  width: 12px;
-  height: 12px;
-  border-top: 2px solid #1fc0fc;
-  border-right: 2px solid #1fc0fc;
-  transform: rotate(135deg);
-  cursor: pointer;
-
-  &:hover {
-    border-top: 2px solid #63d3fd;
-    border-right: 2px solid #63d3fd;
-  }
-
-  &:active {
-    outline: none;
-  }
-
-  &:focus {
-    outline: none;
-    border-top: 2px solid #ffd701;
-    border-right: 2px solid #ffd701;
-  }
-}
-
-.faq__button--opened {
-  transform: rotate(-45deg);
-  top: 50px;
 }
 
 
@@ -172,6 +181,10 @@
 
     &::before {
       font-size: 24px;
+    }
+
+    &::after {
+      top: 15px;
     }
   }
 
@@ -230,6 +243,10 @@
     &::before {
       margin-right: 13px;
     }
+
+    &::after {
+      top: 39px;
+    }
   }
 
   .faq__question {
@@ -249,7 +266,7 @@
     padding-bottom: 2px;
 
     &::after {
-      top: 76%;
+      top: 661px;
     }
   }
 }
