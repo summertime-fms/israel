@@ -168,45 +168,75 @@ modalRecallButton.addEventListener('click', function() {
   closeOverlay();
 });
 
-// TABS
+//
 
-let tabsList = document.querySelector('.programs__tabs');
-let tabs = tabsList.querySelectorAll('.programs__tab');
-tabsList.addEventListener('click', function(evt) {
-  evt.preventDefault();
-  let items = document.querySelectorAll('.programs__item');
+let tabs = document.querySelectorAll('.programs__tab')
 
-  let target = evt.target.closest('li');
-  if (!target) return;
+let descriptions = document.querySelectorAll('.programs__item');
+
+let showDescription = function(index) {
+
+ let descriptionsBlock = descriptions[index].parentNode;
+ let activeDescription = descriptionsBlock.querySelector('.programs__item--active');
+ activeDescription.classList.remove('programs__item--active');
+ descriptions[index].classList.add('programs__item--active');
+}
+
+let toggleTab = function(tab, index) {
   for (let i = 0; i < tabs.length; i++) {
-    if (tabs[i].classList.contains('programs__tab--active')) {
-      tabs[i].classList.remove('programs__tab--active')
-    }
+    tabs[i].classList.remove('programs__tab--active');
   }
-  for (let i = 0; i < items.length; i++) {
-    if (items[i].classList.contains('programs__item--active')) {
-      items[i].classList.remove('programs__item--active')
-    }
+  tab.classList.toggle('programs__tab--active');
 
-  }
-  target.classList.add('programs__tab--active');
+}
 
-  if(target.classList.contains('programs__tab--common')) {
-    items[0].classList.add('programs__item--active');
-  }
-  if(target.classList.contains('programs__tab--academic')) {
-    items[1].classList.add('programs__item--active');
-  }
-  if(target.classList.contains('programs__tab--internship')) {
-    items[2].classList.add('programs__item--active');
-  }
-  if(target.classList.contains('programs__tab--volunteur')) {
-    items[3].classList.add('programs__item--active');
-  }
-  if(target.classList.contains('programs__tab--religion')) {
-    items[4].classList.add('programs__item--active');
-  }
-})
+let operateTabs = function(tab, index) {
+  tab.addEventListener('click', function() {
+    toggleTab(tab, index);
+    showDescription(index);
+  })
+}
+
+for (let i = 0; i < tabs.length; i++) {
+operateTabs(tabs[i], i)
+}
+// let tabsList = document.querySelector('.programs__tabs');
+// let tabs = tabsList.querySelectorAll('.programs__tab');
+// tabsList.addEventListener('click', function(evt) {
+//   evt.preventDefault();
+//   let items = document.querySelectorAll('.programs__item');
+
+//   let target = evt.target.closest('li');
+//   if (!target) return;
+//   for (let i = 0; i < tabs.length; i++) {
+//     if (tabs[i].classList.contains('programs__tab--active')) {
+//       tabs[i].classList.remove('programs__tab--active')
+//     }
+//   }
+//   for (let i = 0; i < items.length; i++) {
+//     if (items[i].classList.contains('programs__item--active')) {
+//       items[i].classList.remove('programs__item--active')
+//     }
+
+//   }
+//   target.classList.add('programs__tab--active');
+
+//   if(target.classList.contains('programs__tab--common')) {
+//     items[0].classList.add('programs__item--active');
+//   }
+//   if(target.classList.contains('programs__tab--academic')) {
+//     items[1].classList.add('programs__item--active');
+//   }
+//   if(target.classList.contains('programs__tab--internship')) {
+//     items[2].classList.add('programs__item--active');
+//   }
+//   if(target.classList.contains('programs__tab--volunteur')) {
+//     items[3].classList.add('programs__item--active');
+//   }
+//   if(target.classList.contains('programs__tab--religion')) {
+//     items[4].classList.add('programs__item--active');
+//   }
+// })
 
 //AUTOSCROLL
 
